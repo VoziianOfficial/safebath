@@ -2672,3 +2672,17 @@ html[data-theme="light"] .nav-toggle:hover {
     color: #492312 !important;
     background: rgba(164, 124, 95, 0.14) !important;
 }
+
+/* ================================
+   SAFEBATH LOGO TEXT ADJUSTMENT
+================================ */
+
+.site-logo__text {
+    transform: translateY(3px);
+}
+
+.site-logo__title {
+    font-size: 1.18rem;
+    line-height: 1;
+    letter-spacing: -0.045em;
+}
