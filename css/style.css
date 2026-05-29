@@ -2758,3 +2758,186 @@ html[data-theme="light"] .nav-toggle:hover {
     opacity: 1 !important;
     visibility: visible !important;
 }
+
+/* ================================
+   TABLET H2 CENTER ALIGN FIX
+   Center all section headings on tablets
+================================ */
+
+@media (min-width: 641px) and (max-width: 1180px) {
+
+    .section-heading,
+    .section-heading--split,
+    .process-flow-heading,
+    .focus-ribbons__intro,
+    .decision-band__intro,
+    .coverage-line__head,
+    .coverage-lens__content,
+    .cta-panel__content,
+    .services-hero__content,
+    .service-hero__content,
+    .about-hero__content,
+    .contact-hero__content,
+    .legal-hero__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        justify-items: center !important;
+        align-items: center !important;
+    }
+
+    .section-heading h2,
+    .section-heading--split h2,
+    .process-flow-heading h2,
+    .focus-ribbons__intro h2,
+    .decision-band__intro h2,
+    .coverage-line__head h2,
+    .coverage-lens__content h2,
+    .cta-panel__content h2,
+    .services-hero__content h1,
+    .service-hero__content h1,
+    .about-hero__content h1,
+    .contact-hero__content h1,
+    .legal-hero__content h1 {
+        width: 100% !important;
+        max-width: min(100%, 860px) !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance;
+    }
+
+    .section-heading p,
+    .section-heading--split p,
+    .focus-ribbons__intro p,
+    .decision-band__intro p,
+    .coverage-line__head p,
+    .coverage-lens__content p,
+    .cta-panel__content p,
+    .services-hero__content p,
+    .service-hero__content p,
+    .about-hero__content p,
+    .contact-hero__content p,
+    .legal-hero__content p {
+        max-width: 760px !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .section-heading--split {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .section-heading--split>*,
+    .section-heading--split .text-link,
+    .section-heading--split .home-rail__nav,
+    .section-heading--split .services-rail__nav {
+        justify-self: center !important;
+    }
+
+    .focus-ribbons__intro .button,
+    .decision-band__intro .button,
+    .coverage-lens__content .button,
+    .cta-panel__actions {
+        margin-inline: auto !important;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .section-heading,
+    .section-heading--split {
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .section-heading h2,
+    .section-heading--split h2 {
+        text-align: center !important;
+        margin-inline: auto !important;
+        max-width: 100% !important;
+    }
+
+    .section-heading p,
+    .section-heading--split p {
+        text-align: center !important;
+        margin-inline: auto !important;
+    }
+}
+
+/* ================================
+   TABLET WIDE HEADINGS FIX
+   Make h1 / h2 use almost full section width
+================================ */
+
+@media (min-width: 641px) and (max-width: 1180px) {
+
+    .section-heading,
+    .section-heading--split,
+    .hero-section__content,
+    .service-hero__content,
+    .services-hero__content,
+    .about-hero__content,
+    .contact-hero__content,
+    .legal-hero__content,
+    .process-flow-heading,
+    .focus-ribbons__intro,
+    .decision-band__intro,
+    .cta-panel__content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .hero-section__content h1,
+    .service-hero__content h1,
+    .services-hero__content h1,
+    .about-hero__content h1,
+    .contact-hero__content h1,
+    .legal-hero__content h1,
+    .section-heading h2,
+    .section-heading--split h2,
+    .process-flow-heading h2,
+    .focus-ribbons__intro h2,
+    .decision-band__intro h2,
+    .cta-panel__content h2 {
+        width: 100% !important;
+        max-width: min(100%, 1180px) !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+        text-wrap: balance;
+    }
+
+    .hero-section__lead,
+    .service-hero__lead,
+    .services-hero__lead,
+    .about-hero__lead,
+    .contact-hero__lead,
+    .legal-hero__lead,
+    .section-heading p,
+    .section-heading--split p,
+    .focus-ribbons__intro p,
+    .decision-band__intro p,
+    .cta-panel__content p {
+        width: 100% !important;
+        max-width: min(100%, 880px) !important;
+        margin-inline: auto !important;
+        text-align: center !important;
+    }
+
+    .section-heading--split {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+    }
+
+    .section-heading--split>*,
+    .section-heading--split .text-link,
+    .section-heading--split .home-rail__nav {
+        justify-self: center !important;
+    }
+}

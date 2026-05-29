@@ -224,13 +224,7 @@ function saveTheme(theme) {
 }
 
 function getPreferredTheme() {
-    const savedTheme = getSavedTheme();
-    if (savedTheme === "light" || savedTheme === "dark") {
-        return savedTheme;
-    }
-
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "dark" : "light";
+    return "dark";
 }
 
 function applyTheme(theme) {
@@ -246,22 +240,13 @@ function applyTheme(theme) {
 }
 
 function toggleTheme() {
-    const currentTheme = html.getAttribute("data-theme") || "light";
-    const nextTheme = currentTheme === "dark" ? "light" : "dark";
-
-    applyTheme(nextTheme);
-    saveTheme(nextTheme);
+    applyTheme("dark");
+    saveTheme("dark");
 }
 
 function initThemeToggle() {
-    const theme = getPreferredTheme();
-    applyTheme(theme);
-
-    if (!themeToggles.length) return;
-
-    themeToggles.forEach((toggle) => {
-        toggle.addEventListener("click", toggleTheme);
-    });
+    applyTheme("dark");
+    saveTheme("dark");
 }
 
 function getCookieConsent() {
