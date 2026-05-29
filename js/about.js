@@ -6,7 +6,7 @@ function initAboutPage() {
     initAboutHeroAnimation();
     initAboutParallax();
     initAboutTiltCards();
-    initAboutSectionAnimations();
+//   initAboutSectionAnimations();  
 }
 
 function initAboutHeroAnimation() {

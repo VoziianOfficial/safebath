@@ -7,7 +7,7 @@ function initServicesPage() {
     initServicesHeroAnimation();
     initServicesParallax();
     initServicesTiltCards();
-    initServicesSectionAnimations();
+    // initServicesSectionAnimations();
 }
 
 function initServicesSwiper() {

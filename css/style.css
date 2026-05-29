@@ -2686,3 +2686,75 @@ html[data-theme="light"] .nav-toggle:hover {
     line-height: 1;
     letter-spacing: -0.045em;
 }
+
+/* ================================
+   DISABLE REVEAL / ENTRANCE ANIMATIONS
+   Keep sections visible immediately
+================================ */
+
+[data-reveal],
+[data-reveal].is-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+[data-reveal]>*,
+[data-reveal].is-visible>* {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition-delay: 0ms !important;
+}
+
+/* Disable GSAP inline transforms on reveal-like cards */
+.hero-section__content,
+.hero-section__highlights li,
+.info-card,
+.service-card--featured,
+.step-card,
+.testimonial-card,
+.coverage-side-card,
+.cta-panel,
+.about-hero__content,
+.about-hero__visual,
+.about-story-card,
+.clarity-panel,
+.about-process-card,
+.about-value-point,
+.about-impression-card,
+.contact-hero__content,
+.contact-hero__visual,
+.contact-option-card,
+.contact-side-card,
+.contact-map__aside-card,
+.contact-form-panel,
+.contact-map__card,
+.contact-clarity__panel,
+.services-hero__content,
+.services-hero__visual,
+.services-showcase-card,
+.editorial-note-card,
+.services-testimonial-card,
+.services-comparison__panel,
+.services-cta__panel,
+.service-hero__content,
+.service-hero__visual,
+.service-hero__panel,
+.service-hero__card,
+.service-hero__chips li,
+.service-mini-card,
+.service-detail-card,
+.related-card,
+.service-factor-panel,
+.service-cta__panel,
+.legal-hero__content,
+.legal-hero__visual,
+.legal-sidebar__card,
+.legal-article,
+.legal-section {
+    opacity: 1 !important;
+    visibility: visible !important;
+}

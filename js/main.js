@@ -605,7 +605,7 @@ function init() {
     initMobileMenu();
     initCookieBanner();
     initFaqAccordion();
-    initRevealObserver();
+    // initRevealObserver();
     initGsapDefaults();
     initPageScript();
 

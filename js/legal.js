@@ -6,7 +6,7 @@ function initLegalPage() {
     initLegalHeroAnimation();
     initLegalParallax();
     initLegalSidebarScrollSpy();
-    initLegalSectionAnimations();
+    // initLegalSectionAnimations();
     initLegalTiltCards();
 }
 
