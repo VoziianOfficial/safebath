@@ -1904,3 +1904,201 @@ html[data-theme="dark"] .contact-hero {
 .contact-map__aside-card:nth-child(2):hover .contact-map__aside-icon i {
     color: #492312 !important;
 }
+
+/* ================================
+   SAFEBATH CONTACT CLARITY
+   Light section + dark panel + shine
+================================ */
+
+.contact-clarity {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(182, 161, 138, 0.22), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(215, 193, 164, 0.26), transparent 28%),
+        linear-gradient(180deg, #F3E4CD 0%, #F8EDDD 52%, #E8D2B4 100%) !important;
+    color: #17110D !important;
+}
+
+/* сама карточка темная, без фото */
+.contact-clarity__panel {
+    position: relative;
+    overflow: hidden !important;
+    isolation: isolate;
+
+    background:
+        radial-gradient(circle at 12% 18%, rgba(201, 170, 137, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(246, 232, 211, 0.07), transparent 26%),
+        linear-gradient(145deg, #17120E 0%, #251E18 52%, #332820 100%) !important;
+
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(201, 170, 137, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(246, 232, 211, 0.07), transparent 26%),
+        linear-gradient(145deg, #17120E 0%, #251E18 52%, #332820 100%) !important;
+
+    border: 1px solid rgba(201, 170, 137, 0.24) !important;
+    box-shadow:
+        0 34px 92px rgba(13, 10, 7, 0.34),
+        0 0 0 1px rgba(201, 170, 137, 0.08),
+        inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+/* если раньше был ::before с фото/оверлеем — гасим */
+.contact-clarity__panel::before {
+    content: "";
+    position: absolute;
+    inset: -45% -75%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-70%);
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 38%,
+            rgba(255, 242, 220, 0.08) 44%,
+            rgba(255, 242, 220, 0.32) 50%,
+            rgba(201, 170, 137, 0.18) 58%,
+            transparent 68%,
+            transparent 100%);
+}
+
+/* внутренняя тонкая рамка */
+.contact-clarity__panel::after {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    z-index: 2;
+    border-radius: 24px;
+    border: 1px solid rgba(246, 232, 211, 0.1);
+    pointer-events: none;
+}
+
+/* контент поверх блеска */
+.contact-clarity__content,
+.contact-clarity__links {
+    position: relative;
+    z-index: 4;
+}
+
+/* текст */
+.contact-clarity__content .section-kicker {
+    color: #C9AA89 !important;
+}
+
+.contact-clarity__content h2 {
+    color: #FFF2DC !important;
+    text-wrap: balance;
+}
+
+.contact-clarity__content p {
+    color: rgba(246, 232, 211, 0.76) !important;
+}
+
+/* ссылки */
+.contact-clarity__links {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.contact-clarity__links .text-link {
+    width: fit-content;
+    color: #F6E8D3 !important;
+    padding: 0.55rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(246, 232, 211, 0.14);
+    background: rgba(246, 232, 211, 0.06);
+    transition:
+        transform var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.contact-clarity__links .text-link:hover {
+    transform: translateX(5px);
+    background: #F6E8D3;
+    color: #17110D !important;
+    border-color: rgba(246, 232, 211, 0.58);
+}
+
+.contact-clarity__links .text-link:hover i {
+    transform: translateX(4px);
+}
+
+/* hover карточки */
+.contact-clarity__panel:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 170, 137, 0.4) !important;
+    box-shadow:
+        0 42px 110px rgba(13, 10, 7, 0.42),
+        0 0 0 1px rgba(201, 170, 137, 0.14),
+        inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+}
+
+.contact-clarity__panel:hover::before {
+    opacity: 1;
+    animation: contactClarityShine 1.2s ease forwards;
+}
+
+@keyframes contactClarityShine {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+/* планшеты */
+@media (max-width: 1024px) {
+    .contact-clarity__panel {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .contact-clarity__content {
+        justify-items: center;
+    }
+
+    .contact-clarity__content h2,
+    .contact-clarity__content p {
+        max-width: 820px;
+        margin-inline: auto;
+    }
+
+    .contact-clarity__links {
+        justify-items: center;
+    }
+}
+
+/* мобилки */
+@media (max-width: 640px) {
+    .contact-clarity__panel {
+        border-radius: 26px !important;
+        padding: 1.25rem !important;
+    }
+
+    .contact-clarity__panel::after {
+        inset: 0.65rem;
+        border-radius: 20px;
+    }
+
+    .contact-clarity__links {
+        width: 100%;
+    }
+
+    .contact-clarity__links .text-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-clarity__panel:hover {
+        transform: translateY(-3px);
+    }
+}
