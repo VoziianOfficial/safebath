@@ -472,7 +472,7 @@ footer,
 .section-heading {
     display: grid;
     gap: 1rem;
-    max-width: 760px;
+    max-width: 960px;
     margin-bottom: clamp(2rem, 3vw, 3rem);
 }
 
