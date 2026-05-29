@@ -2941,3 +2941,342 @@ html[data-theme="light"] .nav-toggle:hover {
         justify-self: center !important;
     }
 }
+
+/* ================================
+   SAFEBATH FINAL COLOR CLEANUP
+   Remove old blue/gray leftovers
+================================ */
+
+/* Progress bar — champagne instead of blue/gray */
+.site-progress {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #74604F 18%,
+            #C9AA89 50%,
+            #F6E8D3 82%,
+            transparent 100%) !important;
+    box-shadow: 0 0 24px rgba(201, 170, 137, 0.32) !important;
+}
+
+/* Focus outline — warm, not gray-blue */
+:focus-visible {
+    outline-color: rgba(201, 170, 137, 0.48) !important;
+}
+
+/* Kill old blue icon gradients in mobile menu */
+.mobile-menu__nav-icon,
+.mobile-menu__featured-icon,
+.mobile-menu__contact-icon,
+.mobile-menu__service-list i,
+.mobile-menu__nav-list li:nth-child(1) .mobile-menu__nav-icon,
+.mobile-menu__nav-list li:nth-child(2) .mobile-menu__nav-icon,
+.mobile-menu__nav-list li:nth-child(3) .mobile-menu__nav-icon,
+.mobile-menu__nav-list li:nth-child(4) .mobile-menu__nav-icon {
+    background:
+        linear-gradient(145deg,
+            rgba(246, 232, 211, 0.1),
+            rgba(201, 170, 137, 0.12)) !important;
+    color: #FFF2DC !important;
+    border-color: rgba(246, 232, 211, 0.16) !important;
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.26),
+        inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+}
+
+/* Mobile menu hover — warm champagne/cocoa */
+.mobile-menu__nav-list a:hover .mobile-menu__nav-icon,
+.mobile-menu__featured-card:hover .mobile-menu__featured-icon,
+.mobile-menu__contact-card:hover .mobile-menu__contact-icon,
+.mobile-menu__service-list a:hover i {
+    background: #F6E8D3 !important;
+    color: #17110D !important;
+    border-color: rgba(246, 232, 211, 0.5) !important;
+}
+
+/* Replace cold white/gray highlights with warm champagne */
+.lux-line::before {
+    background:
+        linear-gradient(135deg,
+            rgba(246, 232, 211, 0.46),
+            rgba(201, 170, 137, 0.12)) !important;
+}
+
+/* Button shine — warmer, not white-blue */
+.button::before {
+    background:
+        linear-gradient(120deg,
+            transparent 20%,
+            rgba(246, 232, 211, 0.2) 48%,
+            transparent 76%) !important;
+}
+
+/* Footer badges keep warm */
+.footer-badges span {
+    background: rgba(246, 232, 211, 0.075) !important;
+    border-color: rgba(246, 232, 211, 0.14) !important;
+    color: #D7C1A4 !important;
+}
+
+/* Global image text overlays — keep espresso, but warm */
+.service-card--featured .service-card__content,
+.rail-card__content,
+.about-split-card__photo-overlay {
+    background: rgba(27, 23, 19, 0.58) !important;
+    border-color: rgba(246, 232, 211, 0.18) !important;
+}
+
+/* Avoid too orange hover accents */
+a:hover,
+.text-link:hover {
+    color: #E8D2B4 !important;
+}
+/* ================================
+   SAFEBATH SOFTER DARK BACKGROUND
+   Less black, more warm espresso
+================================ */
+
+:root,
+html,
+html[data-theme="dark"],
+html[data-theme="light"] {
+    /* Softer dark base */
+    --color-bg: #17120E;
+    --color-bg-soft: #1D1712;
+    --color-bg-muted: #251E18;
+    --color-surface: #2A211B;
+    --color-surface-strong: #332820;
+
+    --bg: var(--color-bg);
+    --bg-soft: var(--color-bg-soft);
+    --bg-muted: var(--color-bg-muted);
+    --bg-elevated: var(--color-surface);
+
+    --gradient-dark: linear-gradient(135deg, #17120E 0%, #1D1712 54%, #2A211B 100%);
+    --gradient-panel: linear-gradient(180deg, rgba(42, 33, 27, 0.94) 0%, rgba(29, 23, 18, 0.98) 100%);
+
+    --surface-glass: rgba(42, 33, 27, 0.82);
+}
+
+/* Body should look espresso, not black */
+body,
+html[data-theme="dark"] body {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(164, 124, 95, 0.16), transparent 30%),
+        radial-gradient(circle at 92% 18%, rgba(201, 170, 137, 0.09), transparent 26%),
+        linear-gradient(180deg, #17120E 0%, #1D1712 48%, #251E18 100%) !important;
+    color: #F6E8D3 !important;
+}
+
+/* Default dark sections — warmer, not pure black */
+.section {
+    background-color: transparent;
+}
+
+/* Header a little softer */
+.site-header {
+    background: rgba(23, 18, 14, 0.86) !important;
+}
+
+/* Panels/cards softer brown */
+.hero-panel,
+.info-card,
+.service-card,
+.step-card,
+.stat-card,
+.faq-item,
+.cookie-banner__inner,
+.cta-panel,
+.services-category-card,
+.contact-option-card,
+.selection-card,
+.comparison-mini-card,
+.about-story-card,
+.clarity-card,
+.about-process-card,
+.about-value-point,
+.service-mini-card,
+.service-detail-card,
+.related-card {
+    background:
+        radial-gradient(circle at top right, rgba(201, 170, 137, 0.08), transparent 28%),
+        linear-gradient(180deg, rgba(42, 33, 27, 0.96) 0%, rgba(29, 23, 18, 0.98) 100%) !important;
+}
+
+/* Very dark CTA/hero sections should be brown-black, not black */
+.hero-section,
+.services-hero,
+.about-hero,
+.contact-hero,
+.legal-hero,
+.services-cta {
+    background-color: #17120E !important;
+}
+
+/* ================================
+   SAFEBATH FAQ LIGHT SECTION
+   Champagne background + dark text
+================================ */
+
+.faq-section {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(182, 161, 138, 0.2), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(215, 193, 164, 0.24), transparent 28%),
+        linear-gradient(180deg, #F3E4CD 0%, #F8EDDD 52%, #E8D2B4 100%) !important;
+    color: #17110D !important;
+}
+
+.faq-section .section-heading {
+    margin-inline: auto;
+    text-align: center;
+    justify-items: center;
+}
+
+.faq-section .section-kicker {
+    color: #74604F !important;
+}
+
+.faq-section h2 {
+    color: #17110D !important;
+    text-wrap: balance;
+}
+
+/* FAQ items */
+.faq-section .faq-list {
+    max-width: 980px;
+    margin-inline: auto;
+}
+
+.faq-section .faq-item {
+    position: relative;
+    overflow: hidden !important;
+    background:
+        linear-gradient(145deg,
+            rgba(255, 243, 225, 0.92),
+            rgba(248, 237, 221, 0.86)) !important;
+    border: 1px solid rgba(23, 17, 13, 0.12) !important;
+    box-shadow:
+        0 18px 48px rgba(13, 10, 7, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.65) !important;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        background-color var(--transition-base);
+}
+
+/* subtle shine */
+.faq-section .faq-item::before {
+    content: "";
+    position: absolute;
+    inset: -45% -75%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-70%);
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 38%,
+            rgba(255, 255, 255, 0.42) 50%,
+            rgba(255, 243, 225, 0.22) 58%,
+            transparent 68%,
+            transparent 100%);
+}
+
+/* content above shine */
+.faq-section .faq-question,
+.faq-section .faq-answer {
+    position: relative;
+    z-index: 2;
+}
+
+.faq-section .faq-question {
+    color: #17110D !important;
+}
+
+.faq-section .faq-question span {
+    color: #17110D !important;
+}
+
+.faq-section .faq-answer p {
+    color: #6F5B4A !important;
+}
+
+/* plus icon */
+.faq-section .faq-question i {
+    background: #F8EDDD !important;
+    color: #492312 !important;
+    border: 1px solid rgba(23, 17, 13, 0.14) !important;
+    box-shadow:
+        0 10px 24px rgba(13, 10, 7, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+}
+
+/* hover */
+.faq-section .faq-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(116, 96, 79, 0.28) !important;
+    background:
+        linear-gradient(145deg,
+            #FFF3E1 0%,
+            #F8EDDD 52%,
+            #E8D2B4 100%) !important;
+    box-shadow:
+        0 26px 68px rgba(13, 10, 7, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+}
+
+.faq-section .faq-item:hover::before {
+    opacity: 1;
+    animation: faqLightShine 1.1s ease forwards;
+}
+
+.faq-section .faq-question:hover {
+    background: rgba(215, 193, 164, 0.32) !important;
+}
+
+.faq-section .faq-question:hover i {
+    background: #492312 !important;
+    color: #FFF3E1 !important;
+    border-color: rgba(73, 35, 18, 0.28) !important;
+}
+
+/* opened state */
+.faq-section .faq-question[aria-expanded="true"] i {
+    background: #74604F !important;
+    color: #FFF3E1 !important;
+    transform: rotate(45deg) scale(1.05);
+}
+
+/* bottom accent line */
+.faq-section .faq-item::after {
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(116, 96, 79, 0.46),
+            transparent) !important;
+}
+
+@keyframes faqLightShine {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+@media (max-width: 640px) {
+    .faq-section .faq-list {
+        max-width: 100%;
+    }
+
+    .faq-section .faq-item {
+        border-radius: 20px;
+    }
+
+    .faq-section .faq-question {
+        gap: 0.75rem;
+    }
+}
