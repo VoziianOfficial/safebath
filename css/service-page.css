@@ -1371,3 +1371,176 @@ body[data-service-bg="catalog-3"] .service-hero {
         animation: none;
     }
 }
+
+/* ================================
+   SAFEBATH SERVICE CTA LIGHT SECTION
+   Light background + dark shining panel
+================================ */
+
+.service-cta {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(182, 161, 138, 0.2), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(215, 193, 164, 0.24), transparent 28%),
+        linear-gradient(180deg, #F3E4CD 0%, #F8EDDD 52%, #E8D2B4 100%) !important;
+    color: #17110D !important;
+}
+
+/* dark panel */
+.service-cta__panel {
+    position: relative;
+    overflow: hidden !important;
+    isolation: isolate;
+
+    background:
+        radial-gradient(circle at 14% 18%, rgba(201, 170, 137, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 82%, rgba(246, 232, 211, 0.08), transparent 30%),
+        linear-gradient(145deg, #17120E 0%, #251E18 52%, #332820 100%) !important;
+
+    border: 1px solid rgba(201, 170, 137, 0.24) !important;
+    box-shadow:
+        0 34px 92px rgba(13, 10, 7, 0.32),
+        0 0 0 1px rgba(201, 170, 137, 0.08),
+        inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
+}
+
+/* inner frame */
+.service-cta__panel::after {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    z-index: 2;
+    border-radius: 24px;
+    border: 1px solid rgba(246, 232, 211, 0.1);
+    pointer-events: none;
+}
+
+/* shine */
+.service-cta__panel::before {
+    content: "";
+    position: absolute;
+    inset: -45% -75%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-70%);
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 38%,
+            rgba(255, 242, 220, 0.08) 44%,
+            rgba(255, 242, 220, 0.34) 50%,
+            rgba(201, 170, 137, 0.18) 58%,
+            transparent 68%,
+            transparent 100%);
+}
+
+/* content above shine */
+.service-cta__content,
+.service-cta__actions {
+    position: relative;
+    z-index: 4;
+}
+
+/* text */
+.service-cta__content .section-kicker {
+    color: #C9AA89 !important;
+}
+
+.service-cta__content h2 {
+    color: #FFF2DC !important;
+    text-wrap: balance;
+}
+
+.service-cta__content p {
+    color: rgba(246, 232, 211, 0.76) !important;
+}
+
+/* buttons */
+.service-cta__panel .button--primary {
+    --button-bg: #F6E8D3 !important;
+    --button-color: #17110D !important;
+    --button-border: rgba(246, 232, 211, 0.7) !important;
+}
+
+.service-cta__panel .button--primary:hover {
+    --button-bg: #C9AA89 !important;
+    --button-color: #17110D !important;
+    --button-border: rgba(201, 170, 137, 0.8) !important;
+}
+
+.service-cta__panel .button--ghost-dark {
+    --button-bg: rgba(246, 232, 211, 0.08) !important;
+    --button-color: #FFF2DC !important;
+    --button-border: rgba(246, 232, 211, 0.18) !important;
+}
+
+.service-cta__panel .button--ghost-dark:hover {
+    --button-bg: rgba(246, 232, 211, 0.14) !important;
+    --button-color: #FFF2DC !important;
+    --button-border: rgba(201, 170, 137, 0.38) !important;
+}
+
+/* hover */
+.service-cta__panel:hover {
+    transform: translateY(-4px);
+    border-color: rgba(201, 170, 137, 0.42) !important;
+    box-shadow:
+        0 42px 110px rgba(13, 10, 7, 0.42),
+        0 0 0 1px rgba(201, 170, 137, 0.14),
+        inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+}
+
+.service-cta__panel:hover::before {
+    opacity: 1;
+    animation: serviceCtaPanelShine 1.25s ease forwards;
+}
+
+@keyframes serviceCtaPanelShine {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    .service-cta__panel {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .service-cta__content {
+        justify-items: center;
+    }
+
+    .service-cta__actions {
+        justify-content: center;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-cta__panel {
+        border-radius: 28px !important;
+        padding: 1.25rem !important;
+    }
+
+    .service-cta__panel::after {
+        inset: 0.65rem;
+        border-radius: 22px;
+    }
+
+    .service-cta__actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .service-cta__actions .button {
+        width: 100%;
+    }
+}
