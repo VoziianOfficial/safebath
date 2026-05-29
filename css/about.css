@@ -1784,3 +1784,103 @@ html[data-theme="dark"] .about-hero {
         font-size: 0.78rem;
     }
 }
+
+/* ================================
+   SAFEBATH ABOUT CTA PANEL SHINE
+================================ */
+
+.about-cta__panel {
+    position: relative;
+    overflow: hidden !important;
+    isolation: isolate;
+}
+
+/* блеск */
+.about-cta__panel::before {
+    content: "";
+    position: absolute;
+    inset: -45% -75%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-70%);
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 38%,
+            rgba(255, 242, 220, 0.08) 44%,
+            rgba(255, 242, 220, 0.34) 50%,
+            rgba(201, 170, 137, 0.18) 56%,
+            transparent 66%,
+            transparent 100%);
+}
+
+/* контент поверх блеска */
+.about-cta__content,
+.about-cta__actions {
+    position: relative;
+    z-index: 4;
+}
+
+/* внутренняя рамка пусть будет ниже контента */
+.about-cta__panel::after {
+    z-index: 3;
+}
+
+/* hover */
+.about-cta__panel:hover {
+    border-color: rgba(201, 170, 137, 0.34) !important;
+    box-shadow:
+        0 38px 100px rgba(0, 0, 0, 0.52),
+        0 0 0 1px rgba(201, 170, 137, 0.14),
+        inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+}
+
+.about-cta__panel:hover::before {
+    opacity: 1;
+    animation: aboutCtaPanelShine 1.25s ease forwards;
+}
+
+@keyframes aboutCtaPanelShine {
+    from {
+        transform: translateX(-70%);
+    }
+
+    to {
+        transform: translateX(70%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-cta__panel:hover::before {
+        animation: none;
+        opacity: 0.18;
+    }
+}
+
+.about-cta__panel::before {
+    opacity: 0.7;
+    animation: aboutCtaIdleShine 6.5s ease-in-out infinite;
+}
+
+.about-cta__panel:hover::before {
+    animation: aboutCtaPanelShine 1.25s ease forwards;
+}
+
+@keyframes aboutCtaIdleShine {
+
+    0%,
+    58% {
+        transform: translateX(-72%);
+        opacity: 0;
+    }
+
+    72% {
+        opacity: 0.42;
+    }
+
+    100% {
+        transform: translateX(72%);
+        opacity: 0;
+    }
+}
