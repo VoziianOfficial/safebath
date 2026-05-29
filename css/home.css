@@ -2386,3 +2386,81 @@ html[data-theme="light"] .decision-band__row:hover i {
         opacity: 0;
     }
 }
+
+/* ================================
+   SAFEBATH SERVICES PREVIEW LIGHT BG
+================================ */
+
+.services-preview {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(182, 161, 138, 0.2), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(215, 193, 164, 0.24), transparent 28%),
+        linear-gradient(180deg, #F3E4CD 0%, #F8EDDD 52%, #E8D2B4 100%) !important;
+    color: #17110D !important;
+}
+
+/* heading */
+.services-preview .section-heading {
+    color: #17110D !important;
+}
+
+.services-preview .section-kicker {
+    color: #74604F !important;
+}
+
+.services-preview h2 {
+    color: #17110D !important;
+}
+
+.services-preview .text-link {
+    color: #492312 !important;
+}
+
+.services-preview .text-link:hover {
+    color: #74604F !important;
+}
+
+/* чтобы линия секции была в палитре */
+.services-preview::after {
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(116, 96, 79, 0.45),
+            transparent) !important;
+}
+
+/* карточки на светлом фоне чуть выразительнее */
+.services-preview .service-card--featured {
+    border-color: rgba(23, 17, 13, 0.14) !important;
+    box-shadow:
+        0 24px 64px rgba(13, 10, 7, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.services-preview .service-card--featured:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 170, 137, 0.38) !important;
+    box-shadow:
+        0 34px 86px rgba(13, 10, 7, 0.24),
+        0 0 0 1px rgba(201, 170, 137, 0.12) !important;
+}
+
+/* overlay на фото оставляем тёмный, чтобы текст читался */
+.services-preview .service-card__content {
+    background: rgba(27, 23, 19, 0.62) !important;
+    border-color: rgba(246, 232, 211, 0.18) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.services-preview .service-card__eyebrow {
+    color: #C9AA89 !important;
+}
+
+.services-preview .service-card__content h3 {
+    color: #FFF2DC !important;
+}
+
+.services-preview .service-card__content p {
+    color: rgba(246, 232, 211, 0.78) !important;
+}
