@@ -2502,3 +2502,173 @@ html[data-theme="dark"] .site-header .site-logo__mark--plain {
     --button-color: #F6E8D3 !important;
     --button-border: rgba(239, 222, 197, 0.24) !important;
 }
+
+/* ================================
+   SAFEBATH GLOBAL ICON RESTYLE
+   Dark theme: white icons
+   Light theme: dark brown icons
+================================ */
+
+/* Theme icon variables */
+:root,
+html[data-theme="dark"] {
+    --safebath-icon-color: #FFF2DC;
+    --safebath-icon-bg: rgba(246, 232, 211, 0.08);
+    --safebath-icon-bg-strong: rgba(246, 232, 211, 0.12);
+    --safebath-icon-border: rgba(246, 232, 211, 0.18);
+    --safebath-icon-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="light"] {
+    --safebath-icon-color: #2A211B;
+    --safebath-icon-bg: rgba(13, 10, 7, 0.055);
+    --safebath-icon-bg-strong: rgba(13, 10, 7, 0.085);
+    --safebath-icon-border: rgba(27, 23, 19, 0.16);
+    --safebath-icon-shadow: 0 14px 34px rgba(13, 10, 7, 0.1);
+}
+
+/* Simple inline icons */
+i[class^="fa-"],
+i[class*=" fa-"] {
+    color: currentColor;
+}
+
+/* Icons inside normal buttons should follow button text */
+.button i,
+.text-link i,
+.faq-question i,
+.site-nav i,
+.footer-nav i {
+    color: currentColor !important;
+}
+
+/* Header round icons: theme toggle, phone, burger */
+.theme-toggle,
+.header-phone--mobile,
+.nav-toggle {
+    color: var(--safebath-icon-color) !important;
+    background: var(--safebath-icon-bg) !important;
+    border-color: var(--safebath-icon-border) !important;
+    box-shadow: var(--safebath-icon-shadow) !important;
+}
+
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .header-phone--mobile,
+html[data-theme="light"] .nav-toggle {
+    color: #2A211B !important;
+    background: rgba(255, 243, 225, 0.72) !important;
+}
+
+/* Main icon chips across all pages */
+.info-card__icon,
+.service-card__icon,
+.step-card__number,
+.coverage-side-card__icon,
+.contact-option-card__icon,
+.selection-card__icon,
+.comparison-mini-card__icon,
+.service-detail-card__icon,
+.service-mini-card__icon,
+.about-story-card__icon,
+.about-value-point__icon,
+.clarity-panel__icon,
+.about-impression-card__icon,
+.contact-map__aside-icon,
+.cookie-banner__icon,
+.success-modal__icon,
+.testimonial-card__quote,
+.services-hero__badge,
+.services-hero__stat-icon,
+.editorial-note-card__icon,
+.services-testimonial-card__icon,
+.legal-hero__floating-icon,
+.legal-sidebar__icon,
+.legal-note__icon {
+    background: var(--safebath-icon-bg) !important;
+    color: var(--safebath-icon-color) !important;
+    border: 1px solid var(--safebath-icon-border) !important;
+    box-shadow: var(--safebath-icon-shadow) !important;
+}
+
+/* Icon itself inside chips */
+.info-card__icon i,
+.service-card__icon i,
+.coverage-side-card__icon i,
+.contact-option-card__icon i,
+.selection-card__icon i,
+.comparison-mini-card__icon i,
+.service-detail-card__icon i,
+.service-mini-card__icon i,
+.about-story-card__icon i,
+.about-value-point__icon i,
+.clarity-panel__icon i,
+.about-impression-card__icon i,
+.contact-map__aside-icon i,
+.cookie-banner__icon i,
+.success-modal__icon i,
+.testimonial-card__quote i,
+.editorial-note-card__icon i,
+.services-testimonial-card__icon i,
+.legal-note__icon i {
+    color: var(--safebath-icon-color) !important;
+}
+
+/* Mobile menu icons */
+.mobile-menu__nav-icon,
+.mobile-menu__featured-icon,
+.mobile-menu__contact-icon,
+.mobile-menu__service-list i {
+    background: rgba(246, 232, 211, 0.08) !important;
+    color: #FFF2DC !important;
+    border: 1px solid rgba(246, 232, 211, 0.16) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28) !important;
+}
+
+/* Footer icons and logo always light because footer is dark */
+.site-footer i,
+.site-footer .site-logo__mark--plain,
+.mobile-menu i,
+.mobile-menu .site-logo__mark--plain {
+    color: #FFF2DC !important;
+}
+
+/* Logo: dark on light theme, light on dark theme */
+html[data-theme="light"] .site-header .site-logo__mark--plain,
+html[data-theme="light"] .site-header .safebath-logo-svg {
+    color: #2A211B !important;
+}
+
+:root .site-header .site-logo__mark--plain,
+html[data-theme="dark"] .site-header .site-logo__mark--plain,
+:root .site-header .safebath-logo-svg,
+html[data-theme="dark"] .site-header .safebath-logo-svg {
+    color: #FFF2DC !important;
+}
+
+/* Hover: warm champagne/copper accent */
+.info-card:hover .info-card__icon,
+.service-detail-card:hover .service-detail-card__icon,
+.contact-option-card:hover .contact-option-card__icon,
+.about-value-point:hover .about-value-point__icon,
+.mobile-menu__nav-list a:hover .mobile-menu__nav-icon,
+.mobile-menu__featured-card:hover .mobile-menu__featured-icon,
+.mobile-menu__service-list a:hover i,
+.theme-toggle:hover,
+.header-phone--mobile:hover,
+.nav-toggle:hover {
+    background: var(--safebath-icon-bg-strong) !important;
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent-light) !important;
+}
+
+/* Light theme hover should stay dark brown/copper, not white */
+html[data-theme="light"] .info-card:hover .info-card__icon,
+html[data-theme="light"] .service-detail-card:hover .service-detail-card__icon,
+html[data-theme="light"] .contact-option-card:hover .contact-option-card__icon,
+html[data-theme="light"] .about-value-point:hover .about-value-point__icon,
+html[data-theme="light"] .theme-toggle:hover,
+html[data-theme="light"] .header-phone--mobile:hover,
+html[data-theme="light"] .nav-toggle:hover {
+    color: #492312 !important;
+    background: rgba(164, 124, 95, 0.14) !important;
+}
