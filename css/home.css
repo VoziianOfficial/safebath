@@ -1285,3 +1285,198 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
         transition: none;
     }
 }
+
+/* ================================
+   SAFEBATH TESTIMONIALS CLEAN QUOTE
+   Big quote outside card + soft shine
+================================ */
+
+.testimonials-section,
+.testimonials-grid {
+    overflow: visible !important;
+}
+
+.testimonial-card {
+    position: relative;
+    overflow: visible !important;
+    padding-top: 3.2rem !important;
+    isolation: isolate;
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+/* Контент карточки выше блеска, но НЕ трогаем кавычку */
+.testimonial-card>*:not(.testimonial-card__quote) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Большая кавычка без фона, без бордера */
+.testimonial-card__quote {
+    position: absolute !important;
+    top: -2rem !important;
+    left: 1.35rem !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    z-index: 5 !important;
+    pointer-events: none;
+    transform: rotate(-8deg);
+    opacity: 0.96;
+}
+
+.testimonial-card__quote i {
+    display: block;
+    font-size: clamp(4.4rem, 7vw, 6.7rem) !important;
+    line-height: 0.78 !important;
+    color: currentColor !important;
+    filter:
+        drop-shadow(0 16px 22px rgba(13, 10, 7, 0.24)) drop-shadow(0 2px 0 color-mix(in srgb, var(--color-bg) 72%, transparent));
+}
+
+/* Темная тема: кавычка светлая */
+:root .testimonial-card__quote,
+html[data-theme="dark"] .testimonial-card__quote {
+    color: rgba(255, 242, 220, 0.92) !important;
+}
+
+/* Светлая тема: кавычка темно-коричневая */
+html[data-theme="light"] .testimonial-card__quote {
+    color: rgba(73, 35, 18, 0.9) !important;
+}
+
+/* Блеск внутри карточки */
+.testimonial-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(115deg,
+            transparent 0%,
+            transparent 36%,
+            color-mix(in srgb, var(--color-accent-light) 24%, transparent) 48%,
+            transparent 60%,
+            transparent 100%);
+    opacity: 0;
+    transform: translateX(-115%);
+}
+
+/* Hover */
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--color-accent) 55%, transparent) !important;
+    box-shadow:
+        var(--shadow-md),
+        0 0 0 1px color-mix(in srgb, var(--color-accent) 18%, transparent),
+        var(--shadow-inset) !important;
+}
+
+.testimonial-card:hover::after {
+    opacity: 1;
+    animation: safebathTestimonialShine 1.15s ease forwards;
+}
+
+.testimonial-card:hover .testimonial-card__quote {
+    transform: rotate(-8deg) translateY(-4px) scale(1.04);
+}
+
+/* Чтобы кавычка не была слишком тяжелой на маленьких экранах */
+@media (max-width: 760px) {
+    .testimonial-card {
+        padding-top: 2.75rem !important;
+    }
+
+    .testimonial-card__quote {
+        top: -1.55rem !important;
+        left: 1rem !important;
+    }
+
+    .testimonial-card__quote i {
+        font-size: 4.2rem !important;
+    }
+}
+
+@keyframes safebathTestimonialShine {
+    from {
+        transform: translateX(-115%);
+    }
+
+    to {
+        transform: translateX(115%);
+    }
+}
+
+/* ================================
+   FIX TESTIMONIAL QUOTE SQUARE
+   Remove any old icon chip styling
+================================ */
+
+.testimonial-card .testimonial-card__quote {
+    position: absolute !important;
+    top: -2rem !important;
+    left: 1.35rem !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    display: block !important;
+    place-items: initial !important;
+
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    color: #FFF2DC !important;
+    z-index: 10 !important;
+    pointer-events: none;
+}
+
+html[data-theme="light"] .testimonial-card .testimonial-card__quote {
+    color: #492312 !important;
+}
+
+.testimonial-card .testimonial-card__quote i {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+
+    font-size: clamp(4.4rem, 7vw, 6.7rem) !important;
+    line-height: 0.78 !important;
+    color: currentColor !important;
+}
