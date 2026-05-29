@@ -322,7 +322,7 @@ html[data-theme="dark"] .hero-section {
 }
 
 .home-rail__button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: var(--shadow-sm), var(--shadow-inset);
 }
 
@@ -696,5 +696,203 @@ html[data-theme="dark"] .hero-section {
 
     .cta-panel {
         border-radius: 26px;
+    }
+}
+
+/* ================================
+   SAFEBATH BENEFITS MARQUEE SECTION
+================================ */
+
+.benefits-marquee-section {
+    overflow: hidden;
+    padding-block: clamp(2.8rem, 5vw, 5rem);
+    background:
+        radial-gradient(circle at 12% 20%, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 26%),
+        radial-gradient(circle at 88% 70%, color-mix(in srgb, var(--color-accent-light) 10%, transparent), transparent 24%),
+        var(--color-bg);
+}
+
+.benefits-marquee-section::after {
+    opacity: 0.28;
+}
+
+.benefits-marquee {
+    position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-block: 10px;
+        margin-block: -10px;
+    mask-image: linear-gradient(90deg,
+            transparent 0%,
+            #000 9%,
+            #000 91%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg,
+            transparent 0%,
+            #000 9%,
+            #000 91%,
+            transparent 100%);
+}
+
+.benefits-marquee--reverse {
+    margin-top: 1rem;
+}
+
+.benefits-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: safebathMarquee 34s linear infinite;
+}
+
+.benefits-marquee--reverse .benefits-marquee__track {
+    animation-name: safebathMarqueeReverse;
+    animation-duration: 42s;
+}
+
+.benefits-marquee__content {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-right: 0.85rem;
+}
+
+.benefits-marquee__content span {
+    min-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.18rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(135deg,
+            color-mix(in srgb, var(--color-surface) 88%, transparent),
+            color-mix(in srgb, var(--color-surface-strong) 74%, transparent));
+    color: var(--color-heading);
+    font-size: clamp(0.9rem, 0.86rem + 0.2vw, 1.02rem);
+    font-weight: 760;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+    box-shadow: var(--shadow-xs), var(--shadow-inset);
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.benefits-marquee--reverse .benefits-marquee__content span {
+    min-height: 48px;
+    padding: 0.72rem 1rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    background: color-mix(in srgb, var(--color-surface) 58%, transparent);
+}
+
+.benefits-marquee__content i {
+    width: 34px;
+    height: 34px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    color: currentColor;
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+    flex: 0 0 auto;
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.benefits-marquee:hover .benefits-marquee__track {
+    animation-play-state: paused;
+}
+
+/* Dark theme hover: light chips */
+:root .benefits-marquee__content span:hover,
+html[data-theme="dark"] .benefits-marquee__content span:hover {
+    background: #F6E8D3;
+    color: #17110D;
+    border-color: rgba(246, 232, 211, 0.7);
+    box-shadow: 0 18px 45px rgba(246, 232, 211, 0.16);
+    transform: translateY(-2px);
+}
+
+/* Light theme hover: dark chips */
+html[data-theme="light"] .benefits-marquee__content span:hover {
+    background: #17110D;
+    color: #F6E8D3;
+    border-color: rgba(23, 17, 13, 0.86);
+    box-shadow: 0 18px 45px rgba(13, 10, 7, 0.2);
+    transform: translateY(-2px);
+}
+
+:root .benefits-marquee__content span:hover i,
+html[data-theme="dark"] .benefits-marquee__content span:hover i {
+    color: #17110D;
+    background: rgba(23, 17, 13, 0.08);
+    border-color: rgba(23, 17, 13, 0.16);
+}
+
+html[data-theme="light"] .benefits-marquee__content span:hover i {
+    color: #F6E8D3;
+    background: rgba(246, 232, 211, 0.08);
+    border-color: rgba(246, 232, 211, 0.16);
+}
+
+@keyframes safebathMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes safebathMarqueeReverse {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-marquee-section {
+        padding-block: clamp(2.4rem, 8vw, 3.8rem);
+    }
+
+    .benefits-marquee {
+        mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
+    }
+
+    .benefits-marquee__content span {
+        min-height: 52px;
+        padding: 0.75rem 0.95rem;
+    }
+
+    .benefits-marquee__content i {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .benefits-marquee__track {
+        animation: none;
+        transform: none;
+    }
+
+    .benefits-marquee {
+        overflow-x: auto;
+        mask-image: none;
+        -webkit-mask-image: none;
     }
 }
