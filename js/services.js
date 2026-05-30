@@ -1,7 +1,10 @@
 const servicesPageName = document.body.dataset.page;
+let isServicesPageInitialized = false;
 
 function initServicesPage() {
     if (servicesPageName !== "services") return;
+    if (isServicesPageInitialized) return;
+    isServicesPageInitialized = true;
 
     initServicesSwiper();
     initServicesHeroAnimation();
@@ -13,6 +16,7 @@ function initServicesPage() {
 function initServicesSwiper() {
     const swiperElement = document.querySelector(".services-rail-swiper");
     if (!swiperElement || typeof window.Swiper === "undefined") return;
+    if (swiperElement.classList.contains("swiper-initialized")) return;
 
     new window.Swiper(swiperElement, {
         slidesPerView: 1,

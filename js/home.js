@@ -1,7 +1,10 @@
 const homePageName = document.body.dataset.page;
+let isHomePageInitialized = false;
 
 function initHomePage() {
     if (homePageName !== "home") return;
+    if (isHomePageInitialized) return;
+    isHomePageInitialized = true;
 
     initHomeSwiper();
     initHomeHeroParallax();
@@ -13,6 +16,7 @@ function initHomePage() {
 function initHomeSwiper() {
     const swiperElement = document.querySelector(".home-rail-swiper");
     if (!swiperElement || typeof window.Swiper === "undefined") return;
+    if (swiperElement.classList.contains("swiper-initialized")) return;
 
     new window.Swiper(swiperElement, {
         slidesPerView: 1,
