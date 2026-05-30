@@ -497,18 +497,15 @@ function applyBrandConfig() {
     const footer = config.footer || {};
     const cookie = config.cookieBanner || {};
 
-    // Logo / brand
     setText(".site-logo__title", company.shortName || company.name);
 
     document.querySelectorAll(".site-logo").forEach((logo) => {
         logo.setAttribute("aria-label", `${company.name} home`);
     });
 
-    // Links only — do NOT change button labels
     setHref('a[href^="tel:"]', contact.phoneHref);
     setHref('a[href^="mailto:"]', contact.emailHref);
 
-    // Update phone text only where it is clearly a text value
     document.querySelectorAll("[data-phone-text]").forEach((element) => {
         element.textContent = contact.phoneDisplay;
     });
@@ -521,7 +518,6 @@ function applyBrandConfig() {
         }
     });
 
-    // Update email text only where it is clearly a text value
     document.querySelectorAll("[data-email-text]").forEach((element) => {
         element.textContent = contact.email;
     });
@@ -539,12 +535,10 @@ function applyBrandConfig() {
         }
     });
 
-    // Optional data attributes
     setText("[data-company-name]", company.name);
     setText("[data-address-text]", contact.address);
     setText("[data-service-area]", company.serviceArea);
 
-    // Footer text
     document.querySelectorAll(".site-footer__brand > p").forEach((paragraph) => {
         paragraph.textContent = company.description;
     });
@@ -564,7 +558,6 @@ function applyBrandConfig() {
         copyright.textContent = `© 2026 ${company.name}. All rights reserved.`;
     });
 
-    // Cookie banner text
     document.querySelectorAll(".cookie-banner__text h2").forEach((title) => {
         title.textContent = cookie.title || "Your privacy choices";
     });
@@ -590,7 +583,6 @@ function init() {
     initMobileMenu();
     initCookieBanner();
     initFaqAccordion();
-    // initRevealObserver();
     initGsapDefaults();
     initPageScript();
 

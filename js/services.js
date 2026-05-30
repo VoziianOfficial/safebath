@@ -9,7 +9,6 @@ function initServicesPage() {
     initServicesHeroAnimation();
     initServicesParallax();
     initServicesTiltCards();
-    // initServicesSectionAnimations();
 }
 
 function initServicesHeroAnimation() {

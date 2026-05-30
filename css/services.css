@@ -697,10 +697,7 @@ html[data-theme="dark"] .services-hero {
 }
 
 
-/* ================================
-   SAFEBATH SERVICES HERO SIGNALS
-   Replaces old stat block
-================================ */
+
 
 .services-hero__signals {
     display: grid !important;
@@ -813,7 +810,7 @@ html[data-theme="dark"] .services-hero {
     border-color: rgba(246, 232, 211, 0.5);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .services-hero__signals {
         grid-template-columns: 1fr;
@@ -826,7 +823,7 @@ html[data-theme="dark"] .services-hero {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 560px) {
     .services-hero__signal {
         grid-template-columns: 1fr;
@@ -851,9 +848,7 @@ html[data-theme="dark"] .services-hero {
     }
 }
 
-/* ================================
-   SAFEBATH EDITORIAL NOTE HOVERS
-================================ */
+
 
 .services-editorial__stack {
     overflow: visible;
@@ -870,7 +865,7 @@ html[data-theme="dark"] .services-hero {
         background-color var(--transition-base);
 }
 
-/* мягкий блик внутри */
+
 .editorial-note-card::after {
     content: "";
     position: absolute;
@@ -890,14 +885,14 @@ html[data-theme="dark"] .services-hero {
     opacity: 0;
 }
 
-/* контент поверх блика */
+
 .editorial-note-card__label,
 .editorial-note-card strong {
     position: relative;
     z-index: 2;
 }
 
-/* label как аккуратный бейдж */
+
 .editorial-note-card__label {
     width: fit-content;
     display: inline-flex;
@@ -924,7 +919,7 @@ html[data-theme="dark"] .services-hero {
     box-shadow: 0 0 16px currentColor;
 }
 
-/* основной hover */
+
 .editorial-note-card:hover {
     transform: translateX(8px) translateY(-3px);
     border-color: rgba(201, 170, 137, 0.38) !important;
@@ -953,7 +948,7 @@ html[data-theme="dark"] .services-hero {
     color: #FFF2DC !important;
 }
 
-/* если секция на светлом фоне */
+
 html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label {
     color: #F6E8D3 !important;
     background: #17110D;
@@ -976,10 +971,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     }
 }
 
-/* ================================
-   SAFEBATH SERVICES CLARITY CANVAS
-   Light section, no testimonials, no cards, no numbers
-================================ */
+
 
 .services-clarity-section {
     position: relative;
@@ -1037,7 +1029,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     line-height: 1.75;
 }
 
-/* Canvas */
+
 .services-clarity__canvas {
     position: relative;
     min-height: clamp(360px, 40vw, 520px);
@@ -1052,7 +1044,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
         inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
-/* abstract moving lines */
+
 .services-clarity__lines {
     position: absolute;
     inset: 0;
@@ -1081,7 +1073,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     animation-duration: 22s;
 }
 
-/* center phrase */
+
 .services-clarity__center {
     position: absolute;
     left: 50%;
@@ -1121,7 +1113,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     letter-spacing: 0.16em;
 }
 
-/* floating category words */
+
 .services-clarity__word {
     position: absolute;
     display: inline-flex;
@@ -1188,7 +1180,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
         inset 0 1px 0 rgba(246, 232, 211, 0.12);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .services-clarity__canvas {
         min-height: 440px;
@@ -1208,7 +1200,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     }
 }
 
-/* Mobile */
+
 @media (max-width: 680px) {
     .services-clarity-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -1298,10 +1290,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
         0 28px 80px rgba(13, 10, 7, 0.14),
         inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
-/* ================================
-   HOME DECISION LAB
-   Replaces old service rail section
-================================ */
+
 
 .home-decision-lab {
     position: relative;
@@ -1363,7 +1352,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     margin-top: 0.35rem;
 }
 
-/* правая часть */
+
 .home-decision-lab__board {
     position: relative;
     display: grid;
@@ -1557,7 +1546,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     }
 }
 
-/* tablet */
+
 @media (max-width: 1100px) {
     .home-decision-lab__layout {
         grid-template-columns: 1fr;
@@ -1579,7 +1568,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .home-decision-lab__board {
         border-radius: 28px;
@@ -1617,9 +1606,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
         text-align: center;
     }
 }
-/* ================================
-   SERVICES CATALOG — LIGHT BACKGROUND
-================================ */
+
 
 .services-catalog {
     background:
@@ -1646,7 +1633,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     color: #6F5B4A !important;
 }
 
-/* линия снизу секции в цвет палитры */
+
 .services-catalog::after {
     background:
         linear-gradient(90deg,
@@ -1656,16 +1643,14 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     opacity: 0.55 !important;
 }
 
-/* ================================
-   SERVICES CATALOG — PREMIUM TITLE POSITION
-================================ */
+
 
 .services-catalog .services-showcase-card {
     position: relative !important;
     overflow: hidden !important;
 }
 
-/* меньше затемнения, чтобы фото было видно */
+
 .services-catalog .services-showcase-card::before {
     background:
         linear-gradient(180deg,
@@ -1674,7 +1659,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
             rgba(13, 10, 7, 0.48) 100%) !important;
 }
 
-/* весь текстовый блок — не в самом низу, а красиво выше */
+
 .services-catalog .services-showcase-card__content {
     position: absolute !important;
     left: 1.15rem !important;
@@ -1699,7 +1684,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     transition: transform 260ms ease !important;
 }
 
-/* маленький бейдж */
+
 .services-catalog .services-showcase-card__eyebrow {
     width: fit-content !important;
     min-height: 30px !important;
@@ -1725,7 +1710,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     box-shadow: 0 10px 24px rgba(13, 10, 7, 0.18) !important;
 }
 
-/* красивая небольшая плашка только под заголовок */
+
 .services-catalog .services-showcase-card__content h3 {
     width: fit-content !important;
     max-width: 100% !important;
@@ -1758,12 +1743,12 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     text-shadow: 0 2px 12px rgba(13, 10, 7, 0.5) !important;
 }
 
-/* если где-то текст остался — скрыть */
+
 .services-catalog .services-showcase-card__content p {
     display: none !important;
 }
 
-/* hover: блок красиво поднимается, но не огромным куском */
+
 .services-catalog .services-showcase-card:hover .services-showcase-card__content {
     transform: translateY(-0.55rem) !important;
 }
@@ -1786,7 +1771,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     transform: scale(1.045) !important;
 }
 
-/* чтобы каждая карточка смотрелась чуть живее */
+
 .services-catalog .services-showcase-card:nth-child(2) .services-showcase-card__content {
     bottom: clamp(2.2rem, 3.8vw, 3rem) !important;
 }
@@ -1799,7 +1784,7 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
     bottom: clamp(2rem, 3.5vw, 2.8rem) !important;
 }
 
-/* мобилка */
+
 @media (max-width: 640px) {
     .services-catalog .services-showcase-card__content {
         left: 0.9rem !important;

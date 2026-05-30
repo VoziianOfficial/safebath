@@ -681,9 +681,7 @@ html[data-theme="dark"] .hero-section {
     }
 }
 
-/* ================================
-   SAFEBATH BENEFITS MARQUEE SECTION
-================================ */
+
 
 .benefits-marquee-section {
     overflow: hidden;
@@ -793,7 +791,7 @@ html[data-theme="dark"] .hero-section {
     animation-play-state: paused;
 }
 
-/* Dark theme hover: light chips */
+
 :root .benefits-marquee__content span:hover,
 html[data-theme="dark"] .benefits-marquee__content span:hover {
     background: #F6E8D3;
@@ -803,7 +801,7 @@ html[data-theme="dark"] .benefits-marquee__content span:hover {
     transform: translateY(-2px);
 }
 
-/* Light theme hover: dark chips */
+
 html[data-theme="light"] .benefits-marquee__content span:hover {
     background: #17110D;
     color: #F6E8D3;
@@ -879,12 +877,9 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     }
 }
 
-/* ================================
-   SAFEBATH IMAGE CARD TEXT READABILITY
-   Services preview + home rail
-================================ */
 
-/* Текстовый блок на карточках услуг */
+
+
 .service-card--featured .service-card__content {
     left: 1rem;
     right: 1rem;
@@ -898,21 +893,21 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     box-shadow: 0 18px 42px rgba(13, 10, 7, 0.32);
 }
 
-/* Заголовок и текст внутри карточек */
+
 .service-card--featured .service-card__content h3,
 .service-card--featured .service-card__content p {
     color: #FFF2DC !important;
     text-shadow: 0 2px 12px rgba(13, 10, 7, 0.5);
 }
 
-/* Бейдж Installation / Replacement / Accessibility */
+
 .service-card--featured .service-card__eyebrow {
     background: rgba(246, 232, 211, 0.12) !important;
     border-color: rgba(246, 232, 211, 0.22) !important;
     color: #FFF2DC !important;
 }
 
-/* Текстовый блок на карточках слайдера */
+
 .rail-card__content {
     left: 1rem;
     right: 1rem;
@@ -926,20 +921,20 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     box-shadow: 0 18px 42px rgba(13, 10, 7, 0.32);
 }
 
-/* Заголовок в rail-карточках */
+
 .rail-card__content h3 {
     color: #FFF2DC !important;
     text-shadow: 0 2px 12px rgba(13, 10, 7, 0.5);
 }
 
-/* Бейдж Installation / Replacement / Repair */
+
 .rail-card__content span {
     background: rgba(246, 232, 211, 0.12) !important;
     border-color: rgba(246, 232, 211, 0.22) !important;
     color: #FFF2DC !important;
 }
 
-/* Чуть мягче затемняем низ картинки, чтобы фон не спорил с текстом */
+
 .service-card--featured::before,
 .rail-card::before {
     background:
@@ -949,17 +944,14 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
             rgba(13, 10, 7, 0.78) 100%) !important;
 }
 
-/* На hover фон становится чуть плотнее */
+
 .service-card--featured:hover .service-card__content,
 .rail-card:hover .rail-card__content {
     background: rgba(13, 10, 7, 0.66);
     border-color: rgba(201, 170, 137, 0.36);
 }
 
-/* ================================
-   SAFEBATH PROCESS FLOW SECTION
-   Horizontal line process, no cards
-================================ */
+
 
 .process-flow-section {
     position: relative;
@@ -1001,7 +993,7 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     padding-top: 2.7rem;
 }
 
-/* Main horizontal animated line */
+
 .process-flow__line {
     position: absolute;
     top: 1.1rem;
@@ -1100,7 +1092,7 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     font-size: 0.96rem;
 }
 
-/* Hover: no card, just line + text interaction */
+
 .process-flow__item:hover {
     transform: translateY(-4px);
 }
@@ -1124,7 +1116,7 @@ html[data-theme="light"] .benefits-marquee__content span:hover i {
     color: var(--color-accent-hover);
 }
 
-/* Theme-specific hover */
+
 html[data-theme="dark"] .process-flow__item:hover .process-flow__content h3,
 :root .process-flow__item:hover .process-flow__content h3 {
     color: #FFF2DC;
@@ -1134,7 +1126,7 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
     color: #492312;
 }
 
-/* Tablet: compact horizontal */
+
 @media (max-width: 1024px) {
     .process-flow {
         gap: 1.4rem;
@@ -1149,7 +1141,7 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
     }
 }
 
-/* Mobile: vertical timeline */
+
 @media (max-width: 760px) {
     .process-flow-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -1268,10 +1260,7 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
     }
 }
 
-/* ================================
-   SAFEBATH TESTIMONIALS CLEAN QUOTE
-   Big quote outside card + soft shine
-================================ */
+
 
 .testimonials-section,
 .testimonials-grid {
@@ -1289,13 +1278,13 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
         box-shadow var(--transition-base);
 }
 
-/* Контент карточки выше блеска, но НЕ трогаем кавычку */
+
 .testimonial-card>*:not(.testimonial-card__quote) {
     position: relative;
     z-index: 2;
 }
 
-/* Большая кавычка без фона, без бордера */
+
 .testimonial-card__quote {
     position: absolute !important;
     top: -2rem !important;
@@ -1325,18 +1314,18 @@ html[data-theme="light"] .process-flow__item:hover .process-flow__content h3 {
         drop-shadow(0 16px 22px rgba(13, 10, 7, 0.24)) drop-shadow(0 2px 0 color-mix(in srgb, var(--color-bg) 72%, transparent));
 }
 
-/* Темная тема: кавычка светлая */
+
 :root .testimonial-card__quote,
 html[data-theme="dark"] .testimonial-card__quote {
     color: rgba(255, 242, 220, 0.92) !important;
 }
 
-/* Светлая тема: кавычка темно-коричневая */
+
 html[data-theme="light"] .testimonial-card__quote {
     color: rgba(73, 35, 18, 0.9) !important;
 }
 
-/* Блеск внутри карточки */
+
 .testimonial-card::after {
     content: "";
     position: absolute;
@@ -1355,7 +1344,7 @@ html[data-theme="light"] .testimonial-card__quote {
     transform: translateX(-115%);
 }
 
-/* Hover */
+
 .testimonial-card:hover {
     transform: translateY(-4px);
     border-color: color-mix(in srgb, var(--color-accent) 55%, transparent) !important;
@@ -1374,7 +1363,7 @@ html[data-theme="light"] .testimonial-card__quote {
     transform: rotate(-8deg) translateY(-4px) scale(1.04);
 }
 
-/* Чтобы кавычка не была слишком тяжелой на маленьких экранах */
+
 @media (max-width: 760px) {
     .testimonial-card {
         padding-top: 2.75rem !important;
@@ -1400,10 +1389,7 @@ html[data-theme="light"] .testimonial-card__quote {
     }
 }
 
-/* ================================
-   FIX TESTIMONIAL QUOTE SQUARE
-   Remove any old icon chip styling
-================================ */
+
 
 .testimonial-card .testimonial-card__quote {
     position: absolute !important;
@@ -1463,10 +1449,7 @@ html[data-theme="light"] .testimonial-card .testimonial-card__quote {
     color: currentColor !important;
 }
 
-/* ================================
-   SAFEBATH DECISION BAND SECTION
-   Premium horizontal section, no map, no cards
-================================ */
+
 
 .decision-band-section {
     position: relative;
@@ -1522,7 +1505,7 @@ html[data-theme="light"] .testimonial-card .testimonial-card__quote {
     margin-top: 0.35rem;
 }
 
-/* Right side */
+
 .decision-band__flow {
     position: relative;
     display: grid;
@@ -1679,7 +1662,7 @@ html[data-theme="light"] .testimonial-card .testimonial-card__quote {
         box-shadow var(--transition-base);
 }
 
-/* Hover */
+
 .decision-band__row:hover {
     transform: translateX(8px);
     border-color: color-mix(in srgb, var(--color-accent) 38%, transparent);
@@ -1709,20 +1692,20 @@ html[data-theme="light"] .testimonial-card .testimonial-card__quote {
     border-color: var(--color-accent);
 }
 
-/* Dark hover: light icon */
+
 :root .decision-band__row:hover i,
 html[data-theme="dark"] .decision-band__row:hover i {
     background: #F6E8D3;
     color: #17110D;
 }
 
-/* Light hover: dark icon */
+
 html[data-theme="light"] .decision-band__row:hover i {
     background: #17110D;
     color: #F6E8D3;
 }
 
-/* Tablet */
+
 @media (max-width: 1100px) {
     .decision-band {
         grid-template-columns: 1fr;
@@ -1737,7 +1720,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 720px) {
     .decision-band-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -1816,10 +1799,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* ================================
-   SAFEBATH PROCESS FLOW — LIGHT CONTRAST SECTION
-   Light section inside dark website
-================================ */
+
 
 .process-flow-section {
     background:
@@ -1830,7 +1810,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     border-block: 1px solid rgba(246, 232, 211, 0.18);
 }
 
-/* верхняя декоративная линия */
+
 .process-flow-section::before {
     background:
         linear-gradient(90deg,
@@ -1842,7 +1822,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     opacity: 1 !important;
 }
 
-/* heading */
+
 .process-flow-section .section-kicker {
     color: #8B6047 !important;
 }
@@ -1852,7 +1832,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: #17110D !important;
 }
 
-/* основная линия */
+
 .process-flow-section .process-flow__line {
     background:
         linear-gradient(90deg,
@@ -1870,7 +1850,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     opacity: 0.9;
 }
 
-/* точки на линии */
+
 .process-flow-section .process-flow__item::before {
     background: #F8EDDD !important;
     border-color: #492312 !important;
@@ -1879,12 +1859,12 @@ html[data-theme="light"] .decision-band__row:hover i {
         0 0 28px rgba(73, 35, 18, 0.18) !important;
 }
 
-/* номера */
+
 .process-flow-section .process-flow__number {
     color: rgba(73, 35, 18, 0.18) !important;
 }
 
-/* текст */
+
 .process-flow-section .process-flow__content h3 {
     color: #17110D !important;
 }
@@ -1893,7 +1873,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: #6F5B4A !important;
 }
 
-/* hover */
+
 .process-flow-section .process-flow__item:hover::before {
     background: #492312 !important;
     border-color: #A47C5F !important;
@@ -1911,7 +1891,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: #492312 !important;
 }
 
-/* мягкая подложка при hover, без карточек */
+
 .process-flow-section .process-flow__item::after {
     content: "";
     position: absolute;
@@ -1935,7 +1915,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     transform: scale(1);
 }
 
-/* mobile vertical line */
+
 @media (max-width: 760px) {
     .process-flow-section .process-flow__line {
         background:
@@ -1959,10 +1939,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* ================================
-   SAFEBATH FOCUS RIBBONS SECTION
-   Light contrast section, no cards
-================================ */
+
 
 .focus-ribbons-section {
     position: relative;
@@ -2024,14 +2001,14 @@ html[data-theme="light"] .decision-band__row:hover i {
     margin-top: 0.35rem;
 }
 
-/* Right side list */
+
 .focus-ribbons__list {
     position: relative;
     display: grid;
     gap: 0.4rem;
 }
 
-/* soft vertical accent */
+
 .focus-ribbons__list::before {
     content: "";
     position: absolute;
@@ -2063,7 +2040,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     border-bottom: 0;
 }
 
-/* point on vertical line */
+
 .focus-ribbons__item::before {
     content: "";
     position: absolute;
@@ -2085,7 +2062,7 @@ html[data-theme="light"] .decision-band__row:hover i {
         box-shadow var(--transition-base);
 }
 
-/* hover ribbon glow */
+
 .focus-ribbons__item::after {
     content: "";
     position: absolute;
@@ -2158,7 +2135,7 @@ html[data-theme="light"] .decision-band__row:hover i {
         opacity var(--transition-base);
 }
 
-/* hover */
+
 .focus-ribbons__item:hover {
     transform: translateX(8px);
     border-color: rgba(164, 124, 95, 0.28);
@@ -2193,7 +2170,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     opacity: 1;
 }
 
-/* Tablet */
+
 @media (max-width: 1100px) {
     .focus-ribbons {
         grid-template-columns: 1fr;
@@ -2206,7 +2183,7 @@ html[data-theme="light"] .decision-band__row:hover i {
    
 }
 
-/* Mobile */
+
 @media (max-width: 720px) {
     .focus-ribbons-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -2267,10 +2244,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* ================================
-   SAFEBATH CTA PANEL SHINE
-   Premium moving gloss effect
-================================ */
+
 
 .cta-panel {
     position: relative;
@@ -2278,7 +2252,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     isolation: isolate;
 }
 
-/* основной блеск */
+
 .cta-panel::before {
     content: "";
     position: absolute;
@@ -2298,25 +2272,25 @@ html[data-theme="light"] .decision-band__row:hover i {
     opacity: 0;
 }
 
-/* контент поверх блеска */
+
 .cta-panel__content,
 .cta-panel__actions {
     position: relative;
     z-index: 4;
 }
 
-/* декоративная рамка пусть будет ниже блеска */
+
 .cta-panel::after {
     z-index: 3;
 }
 
-/* hover-анимация */
+
 .cta-panel:hover::before {
     opacity: 1;
     animation: ctaPanelShine 1.25s ease forwards;
 }
 
-/* чуть дороже на hover */
+
 .cta-panel:hover {
     border-color: rgba(201, 170, 137, 0.34) !important;
     box-shadow:
@@ -2369,9 +2343,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* ================================
-   SAFEBATH SERVICES PREVIEW LIGHT BG
-================================ */
+
 
 .services-preview {
     background:
@@ -2381,7 +2353,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: #17110D !important;
 }
 
-/* heading */
+
 .services-preview .section-heading {
     color: #17110D !important;
 }
@@ -2402,7 +2374,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: #74604F !important;
 }
 
-/* чтобы линия секции была в палитре */
+
 .services-preview::after {
     background:
         linear-gradient(90deg,
@@ -2411,7 +2383,7 @@ html[data-theme="light"] .decision-band__row:hover i {
             transparent) !important;
 }
 
-/* карточки на светлом фоне чуть выразительнее */
+
 .services-preview .service-card--featured {
     border-color: rgba(23, 17, 13, 0.14) !important;
     box-shadow:
@@ -2427,7 +2399,7 @@ html[data-theme="light"] .decision-band__row:hover i {
         0 0 0 1px rgba(201, 170, 137, 0.12) !important;
 }
 
-/* overlay на фото оставляем тёмный, чтобы текст читался */
+
 .services-preview .service-card__content {
     background: rgba(27, 23, 19, 0.62) !important;
     border-color: rgba(246, 232, 211, 0.18) !important;
@@ -2447,10 +2419,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     color: rgba(246, 232, 211, 0.78) !important;
 }
 
-/* ================================
-   HOME DUO CLEAN SECTION
-   Stable two-card layout
-================================ */
+
 
 .home-duo-clean {
     background:
@@ -2474,7 +2443,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     overflow: hidden;
 }
 
-/* левая карточка */
+
 .home-duo-clean__content {
     display: flex;
     flex-direction: column;
@@ -2508,7 +2477,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     line-height: 1.68;
 }
 
-/* список ссылок */
+
 .home-duo-clean__list {
     display: flex;
     flex-wrap: wrap;
@@ -2563,7 +2532,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     --button-border: rgba(246, 232, 211, 0.2) !important;
 }
 
-/* правая фотокарточка */
+
 .home-duo-clean__photo {
     position: relative;
     background: #17110D;
@@ -2645,7 +2614,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     transform: scale(1.06);
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .home-duo-clean__grid {
         grid-template-columns: 1fr;
@@ -2659,7 +2628,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 640px) {
     .home-duo-clean__grid {
         gap: 1rem;
@@ -2699,10 +2668,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* ================================
-   HOME DUO CLEAN SECTION
-   Stable two-card layout
-================================ */
+
 
 .home-duo-clean {
     background:
@@ -2726,7 +2692,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     overflow: hidden;
 }
 
-/* левая карточка */
+
 .home-duo-clean__content {
     display: flex;
     flex-direction: column;
@@ -2760,7 +2726,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     line-height: 1.68;
 }
 
-/* список ссылок */
+
 .home-duo-clean__list {
     display: flex;
     flex-wrap: wrap;
@@ -2815,7 +2781,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     --button-border: rgba(246, 232, 211, 0.2) !important;
 }
 
-/* правая фотокарточка */
+
 .home-duo-clean__photo {
     position: relative;
     background: #17110D;
@@ -2897,7 +2863,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     transform: scale(1.06);
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .home-duo-clean__grid {
         grid-template-columns: 1fr;
@@ -2911,7 +2877,7 @@ html[data-theme="light"] .decision-band__row:hover i {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 640px) {
     .home-duo-clean__grid {
         gap: 1rem;

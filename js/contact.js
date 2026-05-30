@@ -6,7 +6,6 @@ function initContactPage() {
     initContactHeroAnimation();
     initContactParallax();
     initContactTiltCards();
-    // initContactSectionAnimations();
     initContactForm();
     initSuccessModal();
 }

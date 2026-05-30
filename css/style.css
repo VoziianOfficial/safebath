@@ -5,38 +5,35 @@
 @import url("./legal.css");
 @import url("./service-page.css");
 
-/* ================================
-   SAFEBATH THEME TOKENS
-   Dark Espresso + Light Champagne Spa
-================================ */
+
 
 :root,
 html[data-theme="dark"] {
-    /* Main backgrounds */
+    
     --color-bg: #0D0A07;
     --color-bg-soft: #15110E;
     --color-bg-muted: #1B1713;
     --color-surface: #211B16;
     --color-surface-strong: #2C2823;
 
-    /* Text */
+    
     --color-heading: #FFF2DC;
     --color-text: #F6E8D3;
     --color-text-muted: #C9B79F;
     --color-text-soft: #A89078;
 
-    /* Contrast */
+    
     --color-dark: #F6E8D3;
     --color-dark-soft: #D7C1A4;
     --color-dark-muted: #B6A18A;
 
-    /* Accent */
+    
     --color-accent: #C9AA89;
     --color-accent-hover: #E0C19D;
     --color-accent-light: #E8D2B4;
     --color-accent-soft: #A47C5F;
 
-    /* Existing site variables */
+    
     --bg: var(--color-bg);
     --bg-elevated: var(--color-surface);
     --bg-soft: var(--color-bg-soft);
@@ -76,7 +73,7 @@ html[data-theme="dark"] {
     --shadow-lg: 0 30px 85px rgba(0, 0, 0, 0.58);
     --shadow-inset: inset 0 1px 0 rgba(246, 232, 211, 0.06);
 
-    /* System layout tokens — DO NOT DELETE */
+    
     --radius-xs: 10px;
     --radius-sm: 14px;
     --radius-md: 18px;
@@ -142,25 +139,25 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
-    /* Main backgrounds */
+    
     --color-bg: #F3E4CD;
     --color-bg-soft: #F8EDDD;
     --color-bg-muted: #DFC7A8;
     --color-surface: #FFF3E1;
     --color-surface-strong: #E8D2B4;
 
-    /* Text */
+    
     --color-heading: #17110D;
     --color-text: #2A211B;
     --color-text-muted: #765F4E;
     --color-text-soft: #9A8068;
 
-    /* Dark contrast */
+    
     --color-dark: #0D0A07;
     --color-dark-soft: #1B1713;
     --color-dark-muted: #2C2823;
 
-    /* Accent */
+    
     --color-accent: #A47C5F;
     --color-accent-hover: #8B6047;
     --color-accent-light: #C9AA89;
@@ -2276,10 +2273,7 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 
-/* ================================
-   SAFEBATH MINIMAL BATHTUB LOGO
-   No background, theme-aware color
-================================ */
+
 
 .site-logo {
     gap: 0.72rem;
@@ -2352,10 +2346,7 @@ html[data-theme="dark"] .site-header .site-logo__mark--plain {
     }
 }
 
-/* ================================
-   SAFEBATH MOBILE MENU FINAL FIX
-   Put this at the VERY BOTTOM of style.css
-================================ */
+
 
 .mobile-menu__backdrop {
     background:
@@ -2485,13 +2476,9 @@ html[data-theme="dark"] .site-header .site-logo__mark--plain {
     --button-border: rgba(239, 222, 197, 0.24) !important;
 }
 
-/* ================================
-   SAFEBATH GLOBAL ICON RESTYLE
-   Dark theme: white icons
-   Light theme: dark brown icons
-================================ */
 
-/* Theme icon variables */
+
+
 :root,
 html[data-theme="dark"] {
     --safebath-icon-color: #FFF2DC;
@@ -2509,13 +2496,13 @@ html[data-theme="light"] {
     --safebath-icon-shadow: 0 14px 34px rgba(13, 10, 7, 0.1);
 }
 
-/* Simple inline icons */
+
 i[class^="fa-"],
 i[class*=" fa-"] {
     color: currentColor;
 }
 
-/* Icons inside normal buttons should follow button text */
+
 .button i,
 .text-link i,
 .faq-question i,
@@ -2524,7 +2511,7 @@ i[class*=" fa-"] {
     color: currentColor !important;
 }
 
-/* Header round icons: theme toggle, phone, burger */
+
 .theme-toggle,
 .header-phone--mobile,
 .nav-toggle {
@@ -2541,7 +2528,7 @@ html[data-theme="light"] .nav-toggle {
     background: rgba(255, 243, 225, 0.72) !important;
 }
 
-/* Main icon chips across all pages */
+
 .info-card__icon,
 .service-card__icon,
 .step-card__number,
@@ -2572,7 +2559,7 @@ html[data-theme="light"] .nav-toggle {
     box-shadow: var(--safebath-icon-shadow) !important;
 }
 
-/* Icon itself inside chips */
+
 .info-card__icon i,
 .service-card__icon i,
 .coverage-side-card__icon i,
@@ -2595,7 +2582,7 @@ html[data-theme="light"] .nav-toggle {
     color: var(--safebath-icon-color) !important;
 }
 
-/* Mobile menu icons */
+
 .mobile-menu__nav-icon,
 .mobile-menu__featured-icon,
 .mobile-menu__contact-icon,
@@ -2606,7 +2593,7 @@ html[data-theme="light"] .nav-toggle {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28) !important;
 }
 
-/* Footer icons and logo always light because footer is dark */
+
 .site-footer i,
 .site-footer .site-logo__mark--plain,
 .mobile-menu i,
@@ -2614,7 +2601,7 @@ html[data-theme="light"] .nav-toggle {
     color: #FFF2DC !important;
 }
 
-/* Logo: dark on light theme, light on dark theme */
+
 html[data-theme="light"] .site-header .site-logo__mark--plain,
 html[data-theme="light"] .site-header .safebath-logo-svg {
     color: #2A211B !important;
@@ -2627,7 +2614,7 @@ html[data-theme="dark"] .site-header .safebath-logo-svg {
     color: #FFF2DC !important;
 }
 
-/* Hover: warm champagne/copper accent */
+
 .info-card:hover .info-card__icon,
 .service-detail-card:hover .service-detail-card__icon,
 .contact-option-card:hover .contact-option-card__icon,
@@ -2643,7 +2630,7 @@ html[data-theme="dark"] .site-header .safebath-logo-svg {
     color: var(--color-accent-light) !important;
 }
 
-/* Light theme hover should stay dark brown/copper, not white */
+
 html[data-theme="light"] .info-card:hover .info-card__icon,
 html[data-theme="light"] .service-detail-card:hover .service-detail-card__icon,
 html[data-theme="light"] .contact-option-card:hover .contact-option-card__icon,
@@ -2655,9 +2642,7 @@ html[data-theme="light"] .nav-toggle:hover {
     background: rgba(164, 124, 95, 0.14) !important;
 }
 
-/* ================================
-   SAFEBATH LOGO TEXT ADJUSTMENT
-================================ */
+
 
 .site-logo__text {
     transform: translateY(3px);
@@ -2669,10 +2654,7 @@ html[data-theme="light"] .nav-toggle:hover {
     letter-spacing: -0.045em;
 }
 
-/* ================================
-   DISABLE REVEAL / ENTRANCE ANIMATIONS
-   Keep sections visible immediately
-================================ */
+
 
 [data-reveal],
 [data-reveal].is-visible {
@@ -2691,7 +2673,7 @@ html[data-theme="light"] .nav-toggle:hover {
     transition-delay: 0ms !important;
 }
 
-/* Disable GSAP inline transforms on reveal-like cards */
+
 .hero-section__content,
 .hero-section__highlights li,
 .info-card,
@@ -2741,10 +2723,7 @@ html[data-theme="light"] .nav-toggle:hover {
     visibility: visible !important;
 }
 
-/* ================================
-   TABLET H2 CENTER ALIGN FIX
-   Center all section headings on tablets
-================================ */
+
 
 @media (min-width: 641px) and (max-width: 1180px) {
 
@@ -2847,10 +2826,7 @@ html[data-theme="light"] .nav-toggle:hover {
     }
 }
 
-/* ================================
-   TABLET WIDE HEADINGS FIX
-   Make h1 / h2 use almost full section width
-================================ */
+
 
 @media (min-width: 641px) and (max-width: 1180px) {
 
@@ -2921,12 +2897,9 @@ html[data-theme="light"] .nav-toggle:hover {
     }
 }
 
-/* ================================
-   SAFEBATH FINAL COLOR CLEANUP
-   Remove old blue/gray leftovers
-================================ */
 
-/* Progress bar — champagne instead of blue/gray */
+
+
 .site-progress {
     background: linear-gradient(90deg,
             transparent 0%,
@@ -2937,12 +2910,12 @@ html[data-theme="light"] .nav-toggle:hover {
     box-shadow: 0 0 24px rgba(201, 170, 137, 0.32) !important;
 }
 
-/* Focus outline — warm, not gray-blue */
+
 :focus-visible {
     outline-color: rgba(201, 170, 137, 0.48) !important;
 }
 
-/* Kill old blue icon gradients in mobile menu */
+
 .mobile-menu__nav-icon,
 .mobile-menu__featured-icon,
 .mobile-menu__contact-icon,
@@ -2962,7 +2935,7 @@ html[data-theme="light"] .nav-toggle:hover {
         inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
 }
 
-/* Mobile menu hover — warm champagne/cocoa */
+
 .mobile-menu__nav-list a:hover .mobile-menu__nav-icon,
 .mobile-menu__featured-card:hover .mobile-menu__featured-icon,
 .mobile-menu__contact-card:hover .mobile-menu__contact-icon,
@@ -2972,7 +2945,7 @@ html[data-theme="light"] .nav-toggle:hover {
     border-color: rgba(246, 232, 211, 0.5) !important;
 }
 
-/* Replace cold white/gray highlights with warm champagne */
+
 .lux-line::before {
     background:
         linear-gradient(135deg,
@@ -2980,7 +2953,7 @@ html[data-theme="light"] .nav-toggle:hover {
             rgba(201, 170, 137, 0.12)) !important;
 }
 
-/* Button shine — warmer, not white-blue */
+
 .button::before {
     background:
         linear-gradient(120deg,
@@ -2989,14 +2962,14 @@ html[data-theme="light"] .nav-toggle:hover {
             transparent 76%) !important;
 }
 
-/* Footer badges keep warm */
+
 .footer-badges span {
     background: rgba(246, 232, 211, 0.075) !important;
     border-color: rgba(246, 232, 211, 0.14) !important;
     color: #D7C1A4 !important;
 }
 
-/* Global image text overlays — keep espresso, but warm */
+
 .service-card--featured .service-card__content,
 .rail-card__content,
 .about-split-card__photo-overlay {
@@ -3004,21 +2977,18 @@ html[data-theme="light"] .nav-toggle:hover {
     border-color: rgba(246, 232, 211, 0.18) !important;
 }
 
-/* Avoid too orange hover accents */
+
 a:hover,
 .text-link:hover {
     color: #E8D2B4 !important;
 }
-/* ================================
-   SAFEBATH SOFTER DARK BACKGROUND
-   Less black, more warm espresso
-================================ */
+
 
 :root,
 html,
 html[data-theme="dark"],
 html[data-theme="light"] {
-    /* Softer dark base */
+    
     --color-bg: #17120E;
     --color-bg-soft: #1D1712;
     --color-bg-muted: #251E18;
@@ -3036,7 +3006,7 @@ html[data-theme="light"] {
     --surface-glass: rgba(42, 33, 27, 0.82);
 }
 
-/* Body should look espresso, not black */
+
 body,
 html[data-theme="dark"] body {
     background:
@@ -3046,17 +3016,17 @@ html[data-theme="dark"] body {
     color: #F6E8D3 !important;
 }
 
-/* Default dark sections — warmer, not pure black */
+
 .section {
     background-color: transparent;
 }
 
-/* Header a little softer */
+
 .site-header {
     background: rgba(23, 18, 14, 0.86) !important;
 }
 
-/* Panels/cards softer brown */
+
 .hero-panel,
 .info-card,
 .service-card,
@@ -3081,7 +3051,7 @@ html[data-theme="dark"] body {
         linear-gradient(180deg, rgba(42, 33, 27, 0.96) 0%, rgba(29, 23, 18, 0.98) 100%) !important;
 }
 
-/* Very dark CTA/hero sections should be brown-black, not black */
+
 .hero-section,
 .services-hero,
 .about-hero,
@@ -3091,10 +3061,7 @@ html[data-theme="dark"] body {
     background-color: #17120E !important;
 }
 
-/* ================================
-   SAFEBATH FAQ LIGHT SECTION
-   Champagne background + dark text
-================================ */
+
 
 .faq-section {
     background:
@@ -3119,7 +3086,7 @@ html[data-theme="dark"] body {
     text-wrap: balance;
 }
 
-/* FAQ items */
+
 .faq-section .faq-list {
     max-width: 980px;
     margin-inline: auto;
@@ -3143,7 +3110,7 @@ html[data-theme="dark"] body {
         background-color var(--transition-base);
 }
 
-/* subtle shine */
+
 .faq-section .faq-item::before {
     content: "";
     position: absolute;
@@ -3162,7 +3129,7 @@ html[data-theme="dark"] body {
             transparent 100%);
 }
 
-/* content above shine */
+
 .faq-section .faq-question,
 .faq-section .faq-answer {
     position: relative;
@@ -3181,7 +3148,7 @@ html[data-theme="dark"] body {
     color: #6F5B4A !important;
 }
 
-/* plus icon */
+
 .faq-section .faq-question i {
     background: #F8EDDD !important;
     color: #492312 !important;
@@ -3191,7 +3158,7 @@ html[data-theme="dark"] body {
         inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
 }
 
-/* hover */
+
 .faq-section .faq-item:hover {
     transform: translateY(-3px);
     border-color: rgba(116, 96, 79, 0.28) !important;
@@ -3220,14 +3187,14 @@ html[data-theme="dark"] body {
     border-color: rgba(73, 35, 18, 0.28) !important;
 }
 
-/* opened state */
+
 .faq-section .faq-question[aria-expanded="true"] i {
     background: #74604F !important;
     color: #FFF3E1 !important;
     transform: rotate(45deg) scale(1.05);
 }
 
-/* bottom accent line */
+
 .faq-section .faq-item::after {
     background:
         linear-gradient(90deg,

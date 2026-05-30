@@ -9,7 +9,6 @@ function initHomePage() {
     initHomeHeroParallax();
     initHomeTiltCards();
     initHomeGlowTracking();
-    // initHomeSectionAnimations();
 }
 
 function initHomeHeroParallax() {

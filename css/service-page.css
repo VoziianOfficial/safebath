@@ -730,10 +730,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   SAFEBATH ACCESSIBILITY FOCUS SECTION
-   Light editorial flow, no old factor panel
-================================ */
+
 
 .accessibility-focus-section {
     position: relative;
@@ -791,7 +788,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     line-height: 1.75;
 }
 
-/* right flow */
+
 .accessibility-focus__flow {
     position: relative;
     display: grid;
@@ -897,7 +894,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     line-height: 1.62;
 }
 
-/* different hovers */
+
 .accessibility-focus__row:nth-child(1):hover {
     transform: translateX(7px) translateY(-2px);
 }
@@ -951,7 +948,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     color: #492312 !important;
 }
 
-/* tablet */
+
 @media (max-width: 1100px) {
     .accessibility-focus {
         grid-template-columns: 1fr;
@@ -973,7 +970,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .accessibility-focus-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -1040,10 +1037,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   SAFEBATH REPLACEMENT FLOW SECTION
-   Light horizontal section with motion
-================================ */
+
 
 .replacement-flow-section {
     position: relative;
@@ -1096,7 +1090,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     text-wrap: balance;
 }
 
-/* horizontal track */
+
 .replacement-flow__track {
     position: relative;
     display: grid;
@@ -1121,7 +1115,7 @@ body[data-service-bg="catalog-3"] .service-hero {
             transparent 100%);
 }
 
-/* moving line */
+
 .replacement-flow__line {
     position: absolute;
     top: 1.26rem;
@@ -1151,7 +1145,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         color var(--transition-base);
 }
 
-/* soft hover background, not a card */
+
 .replacement-flow__item::before {
     content: "";
     position: absolute;
@@ -1220,7 +1214,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     line-height: 1.66;
 }
 
-/* different hovers */
+
 .replacement-flow__item:nth-child(2):hover {
     transform: translateY(-6px) rotate(-0.35deg);
 }
@@ -1263,7 +1257,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     transform: translateX(-50%) rotate(8deg) scale(1.08);
 }
 
-/* tablet */
+
 @media (max-width: 1024px) {
     .replacement-flow__track {
         gap: 1.35rem;
@@ -1274,7 +1268,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
     .replacement-flow-section {
         padding-block: clamp(3.2rem, 10vw, 5rem);
@@ -1372,10 +1366,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   SAFEBATH SERVICE CTA LIGHT SECTION
-   Light background + dark shining panel
-================================ */
+
 
 .service-cta {
     background:
@@ -1385,7 +1376,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     color: #17110D !important;
 }
 
-/* dark panel */
+
 .service-cta__panel {
     position: relative;
     overflow: hidden !important;
@@ -1403,7 +1394,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
 }
 
-/* inner frame */
+
 .service-cta__panel::after {
     content: "";
     position: absolute;
@@ -1414,7 +1405,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     pointer-events: none;
 }
 
-/* shine */
+
 .service-cta__panel::before {
     content: "";
     position: absolute;
@@ -1434,14 +1425,14 @@ body[data-service-bg="catalog-3"] .service-hero {
             transparent 100%);
 }
 
-/* content above shine */
+
 .service-cta__content,
 .service-cta__actions {
     position: relative;
     z-index: 4;
 }
 
-/* text */
+
 .service-cta__content .section-kicker {
     color: #C9AA89 !important;
 }
@@ -1455,7 +1446,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     color: rgba(246, 232, 211, 0.76) !important;
 }
 
-/* buttons */
+
 .service-cta__panel .button--primary {
     --button-bg: #F6E8D3 !important;
     --button-color: #17110D !important;
@@ -1480,7 +1471,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     --button-border: rgba(201, 170, 137, 0.38) !important;
 }
 
-/* hover */
+
 .service-cta__panel:hover {
     transform: translateY(-4px);
     border-color: rgba(201, 170, 137, 0.42) !important;
@@ -1505,7 +1496,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* tablet */
+
 @media (max-width: 1024px) {
     .service-cta__panel {
         grid-template-columns: 1fr !important;
@@ -1522,7 +1513,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .service-cta__panel {
         border-radius: 28px !important;

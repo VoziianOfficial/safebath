@@ -648,10 +648,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   SAFEBATH CONTACT OPTIONS LIGHT
-   Compact cards + different hovers
-================================ */
+
 
 .contact-options {
     background:
@@ -676,12 +673,12 @@ html[data-theme="dark"] .contact-hero {
     text-wrap: balance;
 }
 
-/* сетка */
+
 .contact-options__grid {
     align-items: stretch;
 }
 
-/* карточки компактнее */
+
 .contact-options .contact-option-card {
     position: relative;
     overflow: hidden !important;
@@ -708,7 +705,7 @@ html[data-theme="dark"] .contact-hero {
         background-color var(--transition-base);
 }
 
-/* иконка справа сверху */
+
 .contact-options .contact-option-card__icon {
     position: absolute !important;
     top: 1rem !important;
@@ -740,7 +737,7 @@ html[data-theme="dark"] .contact-hero {
     font-size: 1rem !important;
 }
 
-/* текст */
+
 .contact-options .contact-option-card h3 {
     color: #17110D !important;
     font-size: 1.12rem !important;
@@ -763,7 +760,7 @@ html[data-theme="dark"] .contact-hero {
     margin-top: 0.15rem;
 }
 
-/* мягкий блеск */
+
 .contact-options .contact-option-card::after {
     content: "";
     position: absolute;
@@ -787,7 +784,7 @@ html[data-theme="dark"] .contact-hero {
     z-index: 3;
 }
 
-/* 1 карточка hover */
+
 .contact-options .contact-option-card:nth-child(1):hover {
     transform: translateY(-5px) rotate(-0.35deg);
     border-color: rgba(73, 35, 18, 0.22) !important;
@@ -802,7 +799,7 @@ html[data-theme="dark"] .contact-hero {
     color: #FFF3E1 !important;
 }
 
-/* 2 карточка hover */
+
 .contact-options .contact-option-card:nth-child(2):hover {
     transform: translateX(6px) translateY(-3px);
     background:
@@ -820,7 +817,7 @@ html[data-theme="dark"] .contact-hero {
     color: #FFF3E1 !important;
 }
 
-/* 3 карточка hover */
+
 .contact-options .contact-option-card:nth-child(3):hover {
     transform: translateY(-5px) rotate(0.35deg);
     background:
@@ -838,7 +835,7 @@ html[data-theme="dark"] .contact-hero {
     color: #FFF3E1 !important;
 }
 
-/* общий hover shine */
+
 .contact-options .contact-option-card:hover::after {
     opacity: 1;
     animation: contactOptionCardShine 1.1s ease forwards;
@@ -858,7 +855,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .contact-options__grid {
         gap: 1rem;
@@ -869,7 +866,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 768px) {
     .contact-options__grid {
         grid-template-columns: 1fr !important;
@@ -903,9 +900,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   CONTACT OPTIONS ICON VISIBILITY FIX
-================================ */
+
 
 .contact-options .contact-option-card__icon {
     background: #492312 !important;
@@ -923,7 +918,7 @@ html[data-theme="dark"] .contact-hero {
     font-size: 1.12rem !important;
 }
 
-/* разные hover, но все хорошо читаемые */
+
 .contact-options .contact-option-card:nth-child(1):hover .contact-option-card__icon,
 .contact-options .contact-option-card:nth-child(2):hover .contact-option-card__icon,
 .contact-options .contact-option-card:nth-child(3):hover .contact-option-card__icon {
@@ -941,10 +936,7 @@ html[data-theme="dark"] .contact-hero {
     color: #492312 !important;
 }
 
-/* ================================
-   SAFEBATH CONTACT FORM CONTRAST SECTION
-   Light section + dark/light contrast + hovers
-================================ */
+
 
 .contact-form-section {
     background:
@@ -958,7 +950,7 @@ html[data-theme="dark"] .contact-hero {
     align-items: stretch;
 }
 
-/* FORM PANEL */
+
 .contact-form-section .contact-form-panel {
     position: relative;
     overflow: hidden !important;
@@ -974,7 +966,7 @@ html[data-theme="dark"] .contact-hero {
         inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
 }
 
-/* тонкий блеск формы */
+
 .contact-form-section .contact-form-panel::before {
     content: "";
     position: absolute;
@@ -1005,14 +997,14 @@ html[data-theme="dark"] .contact-hero {
         inset 0 1px 0 rgba(255, 255, 255, 0.76) !important;
 }
 
-/* content above shine */
+
 .contact-form-section .contact-form-panel__header,
 .contact-form-section .contact-form {
     position: relative;
     z-index: 3;
 }
 
-/* HEADINGS */
+
 .contact-form-section .section-kicker {
     color: #74604F !important;
 }
@@ -1026,7 +1018,7 @@ html[data-theme="dark"] .contact-hero {
     color: #6F5B4A !important;
 }
 
-/* FORM FIELDS */
+
 .contact-form-section label {
     color: #17110D !important;
 }
@@ -1064,7 +1056,7 @@ html[data-theme="dark"] .contact-hero {
         inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
 }
 
-/* SUBMIT BUTTON */
+
 .contact-form-section .contact-form__actions .button--primary {
     --button-bg: #17110D !important;
     --button-color: #FFF3E1 !important;
@@ -1077,7 +1069,7 @@ html[data-theme="dark"] .contact-hero {
     --button-border: rgba(116, 96, 79, 0.9) !important;
 }
 
-/* SIDE CARDS */
+
 .contact-form-section .contact-side-card {
     position: relative;
     overflow: hidden !important;
@@ -1090,7 +1082,7 @@ html[data-theme="dark"] .contact-hero {
         background-color var(--transition-base);
 }
 
-/* обычная светлая боковая карточка */
+
 .contact-form-section .contact-side-card:not(.contact-side-card--image):not(.contact-side-card--dark) {
     background:
         radial-gradient(circle at top right, rgba(255, 255, 255, 0.66), transparent 30%),
@@ -1114,7 +1106,7 @@ html[data-theme="dark"] .contact-hero {
     background: #74604F !important;
 }
 
-/* dark contrast card */
+
 .contact-form-section .contact-side-card--dark {
     background:
         radial-gradient(circle at top right, rgba(201, 170, 137, 0.16), transparent 30%),
@@ -1138,7 +1130,7 @@ html[data-theme="dark"] .contact-hero {
     color: rgba(246, 232, 211, 0.76) !important;
 }
 
-/* photo card */
+
 .contact-form-section .contact-side-card--image {
     border: 1px solid rgba(23, 17, 13, 0.14) !important;
     box-shadow:
@@ -1179,7 +1171,7 @@ html[data-theme="dark"] .contact-hero {
     color: #FFF2DC !important;
 }
 
-/* shine for side cards */
+
 .contact-form-section .contact-side-card::after {
     content: "";
     position: absolute;
@@ -1203,7 +1195,7 @@ html[data-theme="dark"] .contact-hero {
     z-index: 3;
 }
 
-/* different hovers */
+
 .contact-form-section .contact-side-card--image:hover {
     transform: translateY(-5px) rotate(-0.35deg);
     border-color: rgba(201, 170, 137, 0.34) !important;
@@ -1238,7 +1230,7 @@ html[data-theme="dark"] .contact-hero {
     animation: contactSideCardShine 1.1s ease forwards;
 }
 
-/* dark card button */
+
 .contact-form-section .contact-side-card--dark .button--ghost-dark {
     --button-bg: rgba(246, 232, 211, 0.08) !important;
     --button-color: #FFF2DC !important;
@@ -1271,7 +1263,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .contact-form-section .contact-form-section__layout {
         grid-template-columns: 1fr !important;
@@ -1288,7 +1280,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 720px) {
     .contact-form-section .contact-side-panel {
         grid-template-columns: 1fr;
@@ -1310,10 +1302,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   SAFEBATH CONTACT FORM COMPACT FIX
-   Make form smaller and remove empty bottom space
-================================ */
+
 
 .contact-form-section .contact-form-section__layout {
     align-items: start !important;
@@ -1327,7 +1316,7 @@ html[data-theme="dark"] .contact-hero {
     border-radius: 28px !important;
 }
 
-/* меньше расстояния внутри формы */
+
 .contact-form-section .contact-form-panel__header {
     margin-bottom: 0 !important;
 }
@@ -1356,7 +1345,7 @@ html[data-theme="dark"] .contact-hero {
     gap: 0.7rem !important;
 }
 
-/* поля ниже по высоте */
+
 .contact-form-section input,
 .contact-form-section select {
     min-height: 44px !important;
@@ -1390,12 +1379,12 @@ html[data-theme="dark"] .contact-hero {
     padding-block: 0.72rem !important;
 }
 
-/* боковая колонка пусть не растягивает форму */
+
 .contact-form-section .contact-side-panel {
     align-self: start !important;
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .contact-form-section .contact-form-panel {
         max-width: 860px;
@@ -1403,7 +1392,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 720px) {
     .contact-form-section .contact-form-panel {
         padding: 1rem !important;
@@ -1415,9 +1404,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   SAFEBATH INFINITE MARQUEE SECTION
-================================ */
+
 
 .safe-marquee-section {
     position: relative;
@@ -1505,12 +1492,12 @@ html[data-theme="dark"] .contact-hero {
     font-size: 0.95rem;
 }
 
-/* pause on hover */
+
 .safe-marquee:hover .safe-marquee__track {
     animation-play-state: paused;
 }
 
-/* hover chips */
+
 .safe-marquee__content span:hover {
     transform: translateY(-3px);
     color: #FFF3E1;
@@ -1537,7 +1524,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* tablet */
+
 @media (max-width: 1024px) {
     .safe-marquee-section {
         padding-block: clamp(2.4rem, 6vw, 3.8rem);
@@ -1549,7 +1536,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .safe-marquee {
         mask-image: linear-gradient(90deg, transparent 0%, #000 5%, #000 95%, transparent 100%);
@@ -1581,10 +1568,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   SAFEBATH CONTACT MAP SIDE CARDS
-   Smaller cards + top-right icons + different sizes/hovers
-================================ */
+
 
 .contact-map__aside {
     display: grid;
@@ -1592,7 +1576,7 @@ html[data-theme="dark"] .contact-hero {
     align-content: start;
 }
 
-/* разные размеры карточек */
+
 .contact-map__aside-card:nth-child(1) {
     min-height: 185px;
 }
@@ -1601,7 +1585,7 @@ html[data-theme="dark"] .contact-hero {
     min-height: 145px;
 }
 
-/* общий стиль компактных карточек */
+
 .contact-map__aside-card {
     position: relative !important;
     overflow: hidden !important;
@@ -1626,7 +1610,7 @@ html[data-theme="dark"] .contact-hero {
         background-color var(--transition-base);
 }
 
-/* иконка справа сверху */
+
 .contact-map__aside-card .contact-map__aside-icon {
     position: absolute !important;
     top: 1rem !important;
@@ -1662,7 +1646,7 @@ html[data-theme="dark"] .contact-hero {
     font-size: 1.08rem !important;
 }
 
-/* текст */
+
 .contact-map__aside-card h3 {
     max-width: 16ch;
     color: #FFF2DC !important;
@@ -1678,7 +1662,7 @@ html[data-theme="dark"] .contact-hero {
     line-height: 1.55 !important;
 }
 
-/* блеск */
+
 .contact-map__aside-card::after {
     content: "";
     position: absolute;
@@ -1703,7 +1687,7 @@ html[data-theme="dark"] .contact-hero {
     z-index: 3;
 }
 
-/* первая карточка hover */
+
 .contact-map__aside-card:nth-child(1):hover {
     transform: translateY(-5px) rotate(-0.35deg);
     border-color: rgba(201, 170, 137, 0.36) !important;
@@ -1723,7 +1707,7 @@ html[data-theme="dark"] .contact-hero {
     border-color: rgba(246, 232, 211, 0.58) !important;
 }
 
-/* вторая карточка hover */
+
 .contact-map__aside-card:nth-child(2):hover {
     transform: translateX(7px) translateY(-3px);
     border-color: rgba(246, 232, 211, 0.24) !important;
@@ -1743,7 +1727,7 @@ html[data-theme="dark"] .contact-hero {
     border-color: rgba(201, 170, 137, 0.42) !important;
 }
 
-/* запуск блеска */
+
 .contact-map__aside-card:hover::after {
     opacity: 1;
     animation: contactMapAsideShine 1.1s ease forwards;
@@ -1759,7 +1743,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* сама карта тоже чуть оживает */
+
 .contact-map__card {
     transition:
         transform var(--transition-base),
@@ -1776,7 +1760,7 @@ html[data-theme="dark"] .contact-hero {
         inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .contact-map__aside {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1793,7 +1777,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 720px) {
     .contact-map__aside {
         grid-template-columns: 1fr;
@@ -1844,10 +1828,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* ================================
-   CONTACT MAP — ONE LIGHT CARD
-   Make second aside card light
-================================ */
+
 
 .contact-map__aside-card:nth-child(2) {
     background:
@@ -1868,7 +1849,7 @@ html[data-theme="dark"] .contact-hero {
     color: #6F5B4A !important;
 }
 
-/* иконка на светлой карточке */
+
 .contact-map__aside-card:nth-child(2) .contact-map__aside-icon {
     background: #492312 !important;
     color: #FFF3E1 !important;
@@ -1882,7 +1863,7 @@ html[data-theme="dark"] .contact-hero {
     color: #FFF3E1 !important;
 }
 
-/* hover для светлой карточки */
+
 .contact-map__aside-card:nth-child(2):hover {
     transform: translateX(7px) translateY(-3px);
     background:
@@ -1905,10 +1886,7 @@ html[data-theme="dark"] .contact-hero {
     color: #492312 !important;
 }
 
-/* ================================
-   SAFEBATH CONTACT CLARITY
-   Light section + dark panel + shine
-================================ */
+
 
 .contact-clarity {
     background:
@@ -1918,7 +1896,7 @@ html[data-theme="dark"] .contact-hero {
     color: #17110D !important;
 }
 
-/* сама карточка темная, без фото */
+
 .contact-clarity__panel {
     position: relative;
     overflow: hidden !important;
@@ -1946,7 +1924,7 @@ html[data-theme="dark"] .contact-hero {
         box-shadow var(--transition-base);
 }
 
-/* если раньше был ::before с фото/оверлеем — гасим */
+
 .contact-clarity__panel::before {
     content: "";
     position: absolute;
@@ -1966,7 +1944,7 @@ html[data-theme="dark"] .contact-hero {
             transparent 100%);
 }
 
-/* внутренняя тонкая рамка */
+
 .contact-clarity__panel::after {
     content: "";
     position: absolute;
@@ -1977,14 +1955,14 @@ html[data-theme="dark"] .contact-hero {
     pointer-events: none;
 }
 
-/* контент поверх блеска */
+
 .contact-clarity__content,
 .contact-clarity__links {
     position: relative;
     z-index: 4;
 }
 
-/* текст */
+
 .contact-clarity__content .section-kicker {
     color: #C9AA89 !important;
 }
@@ -1998,7 +1976,7 @@ html[data-theme="dark"] .contact-hero {
     color: rgba(246, 232, 211, 0.76) !important;
 }
 
-/* ссылки */
+
 .contact-clarity__links {
     display: grid;
     gap: 0.7rem;
@@ -2029,7 +2007,7 @@ html[data-theme="dark"] .contact-hero {
     transform: translateX(4px);
 }
 
-/* hover карточки */
+
 .contact-clarity__panel:hover {
     transform: translateY(-4px);
     border-color: rgba(201, 170, 137, 0.4) !important;
@@ -2054,7 +2032,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* планшеты */
+
 @media (max-width: 1024px) {
     .contact-clarity__panel {
         grid-template-columns: 1fr !important;
@@ -2077,7 +2055,7 @@ html[data-theme="dark"] .contact-hero {
     }
 }
 
-/* мобилки */
+
 @media (max-width: 640px) {
     .contact-clarity__panel {
         border-radius: 26px !important;

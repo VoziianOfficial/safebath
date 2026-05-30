@@ -6,7 +6,6 @@ function initServicePage() {
     initServiceHeroAnimation();
     initServiceParallax();
     initServiceTiltCards();
-    // initServiceSectionAnimations();
     initServiceFaqAnimation();
     initServiceButtonMicroMotion();
 }
