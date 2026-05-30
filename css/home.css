@@ -56,7 +56,6 @@ html[data-theme="dark"] .hero-section {
 }
 
 .hero-section__content h1 {
-    max-width: 15ch;
     text-wrap: balance;
     margin-inline: auto;
 }

@@ -115,7 +115,6 @@ html[data-theme="dark"] .services-hero {
 }
 
 .services-hero__content h1 {
-    max-width: min(18ch, 100%);
     text-wrap: balance;
     margin-inline: auto;
 }
@@ -1797,4 +1796,55 @@ html[data-theme="light"] .editorial-note-card:hover .editorial-note-card__label 
         border-radius: 16px !important;
         font-size: 1.16rem !important;
     }
+}
+
+
+
+.services-hero__signal {
+    background:
+        radial-gradient(circle at top right, rgba(201, 170, 137, 0.12), transparent 34%),
+        linear-gradient(145deg, rgba(13, 10, 7, 0.88), rgba(23, 18, 14, 0.94)) !important;
+
+    border: 1px solid rgba(246, 232, 211, 0.16) !important;
+
+    box-shadow:
+        0 18px 46px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.services-hero__signal strong {
+    color: #FFF2DC !important;
+}
+
+.services-hero__signal span:not(.services-hero__signal-icon) {
+    color: rgba(246, 232, 211, 0.76) !important;
+}
+
+.services-hero__signal-icon {
+    background: rgba(246, 232, 211, 0.1) !important;
+    border: 1px solid rgba(246, 232, 211, 0.18) !important;
+    color: #F6E8D3 !important;
+}
+
+
+.services-hero__signal:hover {
+    transform: translateY(-3px);
+    background:
+        radial-gradient(circle at top right, rgba(201, 170, 137, 0.18), transparent 34%),
+        linear-gradient(145deg, rgba(13, 10, 7, 0.96), rgba(42, 33, 27, 0.98)) !important;
+
+    border-color: rgba(201, 170, 137, 0.34) !important;
+
+    box-shadow:
+        0 26px 64px rgba(0, 0, 0, 0.42),
+        inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+}
+
+.services-hero__signal:hover .services-hero__signal-icon {
+    background: #F6E8D3 !important;
+    color: #17110D !important;
+    border-color: rgba(246, 232, 211, 0.58) !important;
 }

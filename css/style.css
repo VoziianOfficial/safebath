@@ -3226,3 +3226,89 @@ html[data-theme="dark"] body {
         gap: 0.75rem;
     }
 }
+
+
+.benefits-section.benefits-marquee-section.section {
+    padding-block: clamp(1.4rem, 2.5vw, 2.5rem) !important;
+}
+
+@media (max-width: 768px) {
+    .benefits-section.benefits-marquee-section.section {
+        padding-block: clamp(1.2rem, 4vw, 1.9rem) !important;
+    }
+}
+
+
+
+.hero-section__lead {
+    width: fit-content;
+    max-width: min(62ch, 100%);
+    margin-inline: auto;
+
+    padding: 0.85rem 1.05rem;
+    border-radius: 22px;
+
+    background: rgba(13, 10, 7, 0.38);
+    border: 1px solid rgba(246, 232, 211, 0.16);
+
+    color: #FFF2DC !important;
+    text-shadow: 0 2px 14px rgba(13, 10, 7, 0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 18px 42px rgba(13, 10, 7, 0.18),
+        inset 0 1px 0 rgba(246, 232, 211, 0.08);
+}
+
+@media (max-width: 640px) {
+    .hero-section__lead {
+        width: 100%;
+        padding: 0.8rem 0.9rem;
+        border-radius: 18px;
+    }
+}
+
+/* ================================
+   GLOBAL HERO BACKGROUND DARKENING
+================================ */
+
+.hero-section,
+.services-hero,
+.about-hero,
+.contact-hero,
+.service-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* затемняющий слой поверх фонового фото */
+.hero-section::before,
+.services-hero::before,
+.about-hero::before,
+.contact-hero::before,
+.service-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(13, 10, 7, 0.52) 0%,
+            rgba(13, 10, 7, 0.42) 42%,
+            rgba(13, 10, 7, 0.58) 100%) !important;
+}
+
+/* весь контент hero поверх затемнения */
+.hero-section>*,
+.services-hero>*,
+.about-hero>*,
+.contact-hero>*,
+.service-hero>* {
+    position: relative;
+    z-index: 2;
+}
