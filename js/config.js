@@ -33,9 +33,7 @@ window.SiteConfig = {
         phoneAliases: [
             "+1 888 555 0199",
             "+18885550199",
-            "888 555 0199",
-            "(888) 555-0199",
-            "1 888 555 0199"
+            "(888) 555-0199"
         ],
 
         email: "support@safebathpro.com",

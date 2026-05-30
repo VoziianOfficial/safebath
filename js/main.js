@@ -581,6 +581,32 @@ function replaceAttributesEverywhere(replacements) {
     });
 }
 
+function replaceHeadContentEverywhere(replacements) {
+    replacements.forEach(({ from, to }) => {
+        if (!from || !to || from === to) return;
+
+        const pattern = new RegExp(escapeRegExp(from), "g");
+
+        document.title = document.title.replace(pattern, to);
+
+        document.querySelectorAll("meta[content], link[href]").forEach((element) => {
+            if (element.hasAttribute("content")) {
+                element.setAttribute(
+                    "content",
+                    element.getAttribute("content").replace(pattern, to)
+                );
+            }
+
+            if (element.hasAttribute("href")) {
+                element.setAttribute(
+                    "href",
+                    element.getAttribute("href").replace(pattern, to)
+                );
+            }
+        });
+    });
+}
+
 function applyGlobalConfigReplacements() {
     const config = window.SiteConfig;
     if (!config) return;
@@ -624,6 +650,7 @@ function applyGlobalConfigReplacements() {
 
     replaceTextEverywhere(document.body, replacements);
     replaceAttributesEverywhere(replacements);
+    replaceHeadContentEverywhere(replacements);
 
     const phoneHref = contact.phoneHref || normalizePhoneHref(phoneDisplay);
     const emailHref = contact.emailHref || (email ? `mailto:${email}` : "");
@@ -676,14 +703,31 @@ function applyBrandConfig() {
     });
 
     document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+        link.setAttribute("href", contact.emailHref);
+
         const strong = link.querySelector("strong");
+        const dataEmailText = link.querySelector("[data-email-text]");
+
+        if (dataEmailText) {
+            dataEmailText.textContent = contact.email;
+            return;
+        }
 
         if (strong && strong.textContent.includes("@")) {
             strong.textContent = contact.email;
             return;
         }
 
-        if (!link.querySelector("i") && !link.querySelector("span")) {
+        const textNode = Array.from(link.childNodes).find((node) => {
+            return node.nodeType === Node.TEXT_NODE && node.nodeValue.includes("@");
+        });
+
+        if (textNode) {
+            textNode.nodeValue = `\n                                ${contact.email}\n                                `;
+            return;
+        }
+
+        if (!link.querySelector("i")) {
             link.textContent = contact.email;
         }
     });
