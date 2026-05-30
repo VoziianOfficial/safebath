@@ -1536,10 +1536,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   SERVICE COMPARE VISUAL SECTION
-   Equal photo cards + readable text
-================================ */
+
 
 .service-compare-visual {
     background:
@@ -1579,7 +1576,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     line-height: 1.75;
 }
 
-/* карточки */
+
 .service-compare-visual__cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1616,7 +1613,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     transition: transform 900ms ease;
 }
 
-/* затемнение легкое, чтобы фото было видно */
+
 .service-compare-photo-card::before {
     content: "";
     position: absolute;
@@ -1630,7 +1627,6 @@ body[data-service-bg="catalog-3"] .service-hero {
     pointer-events: none;
 }
 
-/* тонкая рамка внутри */
 .service-compare-photo-card::after {
     content: "";
     position: absolute;
@@ -1641,7 +1637,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     pointer-events: none;
 }
 
-/* текстовая плашка */
+
 .service-compare-photo-card__content {
     position: absolute;
     left: 1rem;
@@ -1693,7 +1689,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     text-shadow: 0 2px 12px rgba(13, 10, 7, 0.52);
 }
 
-/* hover */
+
 .service-compare-photo-card:hover {
     transform: translateY(-5px);
     border-color: rgba(201, 170, 137, 0.36);
@@ -1711,7 +1707,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     border-color: rgba(201, 170, 137, 0.34);
 }
 
-/* tablet */
+
 @media (max-width: 1024px) {
     .service-compare-visual__layout {
         grid-template-columns: 1fr;
@@ -1737,7 +1733,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-compare-visual__cards {
         grid-template-columns: 1fr;
@@ -1761,10 +1757,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   SERVICE RELATED CLEAN CARDS
-   Equal cards + visible photo + readable text
-================================ */
+
 
 .service-related-clean {
     background:
@@ -1790,7 +1783,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     text-wrap: balance;
 }
 
-/* grid */
+
 .service-related-clean .related-grid {
     display: grid !important;
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -1798,7 +1791,6 @@ body[data-service-bg="catalog-3"] .service-hero {
     align-items: stretch !important;
 }
 
-/* одинаковые карточки */
 .service-related-clean .related-card {
     position: relative !important;
     min-height: 430px !important;
@@ -1822,7 +1814,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         border-color var(--transition-base);
 }
 
-/* фото занимает всю карточку */
+
 .service-related-clean .related-card .card-media {
     position: absolute !important;
     inset: 0 !important;
@@ -1839,7 +1831,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         filter var(--transition-base);
 }
 
-/* мягкое затемнение, чтобы фото не убивалось */
+
 .service-related-clean .related-card::before {
     content: "";
     position: absolute;
@@ -1855,7 +1847,6 @@ body[data-service-bg="catalog-3"] .service-hero {
     pointer-events: none;
 }
 
-/* тонкая внутренняя рамка */
 .service-related-clean .related-card::after {
     content: "";
     position: absolute;
@@ -1868,7 +1859,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     pointer-events: none;
 }
 
-/* текстовая плашка */
+
 .service-related-clean .related-card__content {
     position: absolute !important;
     left: 1rem !important;
@@ -1893,7 +1884,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
 }
 
-/* текст */
+
 .service-related-clean .related-card__content h3 {
     color: #FFF2DC !important;
     font-size: clamp(1.14rem, 1rem + 0.45vw, 1.42rem) !important;
@@ -1913,7 +1904,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     overflow: hidden;
 }
 
-/* ссылка */
+
 .service-related-clean .related-card__content a {
     width: fit-content;
     display: inline-flex;
@@ -1939,7 +1930,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         border-color var(--transition-base);
 }
 
-/* hover */
+
 .service-related-clean .related-card:hover {
     transform: translateY(-5px);
     border-color: rgba(201, 170, 137, 0.38) !important;
@@ -1964,7 +1955,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     border-color: rgba(246, 232, 211, 0.65);
 }
 
-/* tablet */
+
 @media (max-width: 1024px) {
     .service-related-clean .related-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -1975,7 +1966,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* mobile */
+
 @media (max-width: 720px) {
     .service-related-clean .related-grid {
         grid-template-columns: 1fr !important;
@@ -2000,22 +1991,17 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* ================================
-   MOBILE REDESIGN — REPLACEMENT FLOW + ACCESSIBILITY FOCUS
-   Only mobile/tablet overrides
-================================ */
+
 
 @media (max-width: 760px) {
 
-    /* общая высота секций меньше на мобилке */
+
     .replacement-flow-section,
     .accessibility-focus-section {
         padding-block: clamp(3rem, 9vw, 4.5rem) !important;
     }
 
-    /* =========================
-       REPLACEMENT FLOW MOBILE
-    ========================= */
+
 
     .replacement-flow {
         gap: 1.6rem !important;
@@ -2144,9 +2130,7 @@ body[data-service-bg="catalog-3"] .service-hero {
         transform: rotate(6deg) scale(1.06) !important;
     }
 
-    /* =========================
-       ACCESSIBILITY FOCUS MOBILE
-    ========================= */
+
 
     .accessibility-focus {
         gap: 1.7rem !important;
@@ -2273,7 +2257,7 @@ body[data-service-bg="catalog-3"] .service-hero {
     }
 }
 
-/* очень маленькие телефоны */
+
 @media (max-width: 420px) {
     .replacement-flow__item {
         padding: 0.95rem 3.8rem 0.95rem 0.95rem !important;
