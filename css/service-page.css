@@ -2279,3 +2279,107 @@ body[data-service-bg="catalog-3"] .service-hero {
         left: 0.9rem !important;
     }
 }
+
+
+body[data-service-bg="catalog-1"] .service-hero {
+    background-image:
+        linear-gradient(180deg,
+            rgba(23, 18, 14, 0.78) 0%,
+            rgba(37, 30, 24, 0.68) 48%,
+            rgba(23, 18, 14, 0.82) 100%),
+        url("../assets/images/services/services-catalog-1.jpg") !important;
+}
+
+body[data-service-bg="catalog-3"] .service-hero {
+    background-image:
+        linear-gradient(180deg,
+            rgba(23, 18, 14, 0.76) 0%,
+            rgba(37, 30, 24, 0.66) 48%,
+            rgba(23, 18, 14, 0.82) 100%),
+        url("../assets/images/services/services-catalog-3.jpg") !important;
+}
+
+
+.service-hero::before {
+    background:
+        radial-gradient(circle at 10% 14%, rgba(246, 232, 211, 0.14), transparent 20%),
+        radial-gradient(circle at 88% 10%, rgba(201, 170, 137, 0.1), transparent 18%),
+        linear-gradient(180deg, rgba(23, 18, 14, 0.16) 0%, rgba(23, 18, 14, 0) 100%) !important;
+}
+
+
+.service-hero .section-kicker,
+.service-hero__content h1,
+.service-hero__lead,
+.service-hero-content h1,
+.service-hero-content p {
+    color: #FFF2DC !important;
+}
+
+.service-hero .section-kicker {
+    color: rgba(201, 170, 137, 0.92) !important;
+}
+
+
+.service-hero__chips li,
+.service-hero .hero-chips li {
+    background: rgba(37, 30, 24, 0.68) !important;
+    border-color: rgba(246, 232, 211, 0.22) !important;
+    color: #F6E8D3 !important;
+}
+
+
+.service-hero__panel::before {
+    background:
+        linear-gradient(180deg,
+            rgba(13, 10, 7, 0.04) 0%,
+            rgba(13, 10, 7, 0.14) 28%,
+            rgba(13, 10, 7, 0.58) 100%) !important;
+}
+
+
+.service-hero__card {
+    background: rgba(37, 30, 24, 0.7) !important;
+    border-color: rgba(246, 232, 211, 0.22) !important;
+}
+
+.service-hero__card span {
+    color: rgba(201, 170, 137, 0.9) !important;
+}
+
+.service-hero__card strong {
+    color: #FFF2DC !important;
+}
+
+
+.service-hero .button--ghost,
+.service-hero .btn-secondary {
+    color: #FFF2DC !important;
+    background: rgba(37, 30, 24, 0.42) !important;
+    border-color: rgba(246, 232, 211, 0.28) !important;
+}
+
+.service-hero .button--ghost:hover,
+.service-hero .btn-secondary:hover {
+    background: rgba(37, 30, 24, 0.62) !important;
+    border-color: rgba(201, 170, 137, 0.46) !important;
+}
+
+
+.related-card::before {
+    background:
+        linear-gradient(180deg,
+            rgba(13, 10, 7, 0.03) 0%,
+            rgba(13, 10, 7, 0.14) 26%,
+            rgba(13, 10, 7, 0.78) 100%) !important;
+}
+
+.related-card:hover {
+    box-shadow: 0 30px 70px rgba(13, 10, 7, 0.22) !important;
+}
+
+.service-cta__panel {
+    background:
+        radial-gradient(circle at top right, rgba(201, 170, 137, 0.12), transparent 24%),
+        linear-gradient(135deg, #17120E 0%, #251E18 52%, #332820 100%) !important;
+}
