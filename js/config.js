@@ -34,7 +34,7 @@ window.SiteConfig = {
             "Comfort & Accessibility Focus"
         ],
         disclaimer:
-            "Disclaimer: SafeBath is an independent referral and comparison platform. The website does not perform installation, replacement, repair, maintenance, consultation, or remodeling services directly. Providers are independent, and availability, pricing, timelines, licensing, insurance, warranties, and service details may vary by location and provider. Homeowners are responsible for reviewing provider information and verifying any contractor or company before hiring. Any people shown in photos or videos may be actors or models and are not necessarily actual providers listed on this website."
+            "Disclaimer: SafeBath is an independent referral and comparison platform. The website does not perform installation, replacement, repair, accessibility-upgrade, or remodeling services directly. Providers are independent, and availability, pricing, timelines, licensing, insurance, warranties, and service details may vary by location and provider. Homeowners are responsible for reviewing provider information and verifying any contractor or company before hiring. Any people shown in photos or videos may be actors or models and are not necessarily actual providers listed on this website."
     },
 
     storage: {
@@ -64,7 +64,7 @@ window.SiteConfig = {
         "services.html": {
             title: "Walk-in Tub Services | SafeBath",
             description:
-                "Browse walk-in tub service categories including installation, replacement, repair, accessibility upgrades, maintenance, and consultation.",
+                "Browse walk-in tub service categories including installation, replacement, repair, and accessibility upgrades.",
             canonical: "https://safebathpro.com/services.html"
         },
         "contact.html": {
@@ -96,18 +96,6 @@ window.SiteConfig = {
             description:
                 "Compare accessibility upgrade options for walk-in tubs, including support features, safer entry conditions, comfort improvements, and provider paths.",
             canonical: "https://safebathpro.com/walk-in-tub-accessibility-upgrades.html"
-        },
-        "walk-in-tub-maintenance.html": {
-            title: "Walk-in Tub Maintenance | SafeBath",
-            description:
-                "Compare walk-in tub maintenance options and review provider paths for routine care, system checks, and preventive servicing.",
-            canonical: "https://safebathpro.com/walk-in-tub-maintenance.html"
-        },
-        "walk-in-tub-consultation.html": {
-            title: "Walk-in Tub Consultation | SafeBath",
-            description:
-                "Use SafeBath to compare walk-in tub consultation paths before choosing installation, replacement, repair, upgrades, or maintenance.",
-            canonical: "https://safebathpro.com/walk-in-tub-consultation.html"
         },
         "privacy-policy.html": {
             title: "Privacy Policy | SafeBath",
