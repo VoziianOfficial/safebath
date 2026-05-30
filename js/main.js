@@ -593,10 +593,17 @@ function applyGlobalConfigReplacements() {
     const email = contact.email || "";
     const address = contact.address || "";
 
+    const serviceArea = company.serviceArea || address;
+
     const replacements = [
         ...(company.aliases || []).map((from) => ({
             from,
             to: companyName
+        })),
+
+        ...(company.serviceAreaAliases || []).map((from) => ({
+            from,
+            to: serviceArea
         })),
 
         ...(contact.phoneAliases || []).map((from) => ({
