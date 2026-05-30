@@ -1999,3 +1999,299 @@ body[data-service-bg="catalog-3"] .service-hero {
         border-radius: 20px !important;
     }
 }
+
+/* ================================
+   MOBILE REDESIGN — REPLACEMENT FLOW + ACCESSIBILITY FOCUS
+   Only mobile/tablet overrides
+================================ */
+
+@media (max-width: 760px) {
+
+    /* общая высота секций меньше на мобилке */
+    .replacement-flow-section,
+    .accessibility-focus-section {
+        padding-block: clamp(3rem, 9vw, 4.5rem) !important;
+    }
+
+    /* =========================
+       REPLACEMENT FLOW MOBILE
+    ========================= */
+
+    .replacement-flow {
+        gap: 1.6rem !important;
+    }
+
+    .replacement-flow__head {
+        max-width: 100% !important;
+        text-align: left !important;
+        justify-items: start !important;
+        margin-inline: 0 !important;
+    }
+
+    .replacement-flow__head h2 {
+        max-width: 100% !important;
+        font-size: clamp(1.85rem, 8vw, 2.5rem) !important;
+        line-height: 1.08 !important;
+    }
+
+    .replacement-flow__track {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.9rem !important;
+        padding: 0 !important;
+    }
+
+    .replacement-flow__track::before,
+    .replacement-flow__line {
+        display: none !important;
+    }
+
+    .replacement-flow__item {
+        position: relative !important;
+        min-height: 0 !important;
+
+        display: grid !important;
+        justify-items: start !important;
+        text-align: left !important;
+        gap: 0.45rem !important;
+
+        padding: 1rem 4.15rem 1rem 1rem !important;
+        border-radius: 24px !important;
+
+        background:
+            radial-gradient(circle at top right, rgba(201, 170, 137, 0.18), transparent 34%),
+            linear-gradient(145deg, #17120E 0%, #251E18 52%, #332820 100%) !important;
+
+        border: 1px solid rgba(201, 170, 137, 0.24) !important;
+        box-shadow:
+            0 18px 46px rgba(13, 10, 7, 0.24),
+            inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
+
+        overflow: hidden !important;
+    }
+
+    .replacement-flow__item::before {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        border-radius: inherit !important;
+
+        background:
+            linear-gradient(120deg,
+                transparent 0%,
+                rgba(255, 242, 220, 0.08) 46%,
+                transparent 72%) !important;
+
+        opacity: 0 !important;
+        transform: translateX(-35%) !important;
+        transition:
+            opacity var(--transition-base),
+            transform var(--transition-base) !important;
+        pointer-events: none !important;
+    }
+
+    .replacement-flow__item:hover::before {
+        opacity: 1 !important;
+        transform: translateX(35%) !important;
+    }
+
+    .replacement-flow__icon {
+        position: absolute !important;
+        top: 1rem !important;
+        right: 1rem !important;
+        left: auto !important;
+
+        width: 46px !important;
+        height: 46px !important;
+        transform: none !important;
+
+        background: #F6E8D3 !important;
+        color: #17110D !important;
+        border: 1px solid rgba(246, 232, 211, 0.58) !important;
+
+        box-shadow:
+            0 14px 32px rgba(13, 10, 7, 0.28),
+            inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
+    }
+
+    .replacement-flow__icon i {
+        color: currentColor !important;
+        font-size: 1rem !important;
+    }
+
+    .replacement-flow__item h3 {
+        color: #FFF2DC !important;
+        max-width: 16ch !important;
+        font-size: 1.08rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .replacement-flow__item p {
+        color: rgba(246, 232, 211, 0.74) !important;
+        max-width: 34ch !important;
+        font-size: 0.92rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .replacement-flow__item:nth-child(2):hover,
+    .replacement-flow__item:nth-child(3):hover,
+    .replacement-flow__item:nth-child(4):hover {
+        transform: translateY(-3px) !important;
+    }
+
+    .replacement-flow__item:hover .replacement-flow__icon {
+        background: #C9AA89 !important;
+        transform: rotate(6deg) scale(1.06) !important;
+    }
+
+    /* =========================
+       ACCESSIBILITY FOCUS MOBILE
+    ========================= */
+
+    .accessibility-focus {
+        gap: 1.7rem !important;
+    }
+
+    .accessibility-focus__intro {
+        max-width: 100% !important;
+        text-align: left !important;
+        justify-items: start !important;
+        margin-inline: 0 !important;
+    }
+
+    .accessibility-focus__intro h2 {
+        max-width: 100% !important;
+        font-size: clamp(1.85rem, 8vw, 2.5rem) !important;
+        line-height: 1.08 !important;
+    }
+
+    .accessibility-focus__intro p {
+        max-width: 100% !important;
+        font-size: 0.98rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .accessibility-focus__flow {
+        display: grid !important;
+        gap: 0.85rem !important;
+    }
+
+    .accessibility-focus__flow::before {
+        display: none !important;
+    }
+
+    .accessibility-focus__row {
+        position: relative !important;
+
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.65rem !important;
+
+        min-height: 0 !important;
+        padding: 1rem 1rem 1rem 4.2rem !important;
+        border-radius: 24px !important;
+        border: 1px solid rgba(73, 35, 18, 0.12) !important;
+
+        background:
+            radial-gradient(circle at top left, rgba(255, 255, 255, 0.78), transparent 32%),
+            linear-gradient(145deg, #FFF8EA 0%, #F3E4CD 54%, #E8D2B4 100%) !important;
+
+        box-shadow:
+            0 18px 46px rgba(13, 10, 7, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+
+        overflow: hidden !important;
+    }
+
+    .accessibility-focus__row::before {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+
+        width: 4px !important;
+        border-radius: 999px !important;
+        background: linear-gradient(180deg, #492312, #C9AA89) !important;
+
+        opacity: 1 !important;
+        transform: none !important;
+        border: 0 !important;
+    }
+
+    .accessibility-focus__icon {
+        position: absolute !important;
+        left: 1rem !important;
+        top: 1rem !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        background: #492312 !important;
+        color: #FFF2DC !important;
+        border: 1px solid rgba(73, 35, 18, 0.22) !important;
+
+        box-shadow:
+            0 12px 28px rgba(73, 35, 18, 0.18),
+            inset 0 1px 0 rgba(246, 232, 211, 0.1) !important;
+    }
+
+    .accessibility-focus__icon i {
+        color: currentColor !important;
+        font-size: 0.95rem !important;
+    }
+
+    .accessibility-focus__row div {
+        gap: 0.35rem !important;
+    }
+
+    .accessibility-focus__row h3 {
+        color: #17110D !important;
+        font-size: 1.08rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .accessibility-focus__row p {
+        color: #6F5B4A !important;
+        max-width: 100% !important;
+        font-size: 0.92rem !important;
+        line-height: 1.52 !important;
+    }
+
+    .accessibility-focus__row:hover {
+        transform: translateY(-3px) !important;
+        border-color: rgba(73, 35, 18, 0.22) !important;
+        box-shadow:
+            0 24px 58px rgba(13, 10, 7, 0.16),
+            inset 0 1px 0 rgba(255, 255, 255, 0.78) !important;
+    }
+
+    .accessibility-focus__row:hover .accessibility-focus__icon {
+        background: #F6E8D3 !important;
+        color: #492312 !important;
+        transform: rotate(6deg) scale(1.05) !important;
+    }
+}
+
+/* очень маленькие телефоны */
+@media (max-width: 420px) {
+    .replacement-flow__item {
+        padding: 0.95rem 3.8rem 0.95rem 0.95rem !important;
+    }
+
+    .replacement-flow__icon {
+        width: 40px !important;
+        height: 40px !important;
+        right: 0.9rem !important;
+    }
+
+    .accessibility-focus__row {
+        padding: 0.95rem 0.95rem 0.95rem 3.9rem !important;
+    }
+
+    .accessibility-focus__icon {
+        width: 38px !important;
+        height: 38px !important;
+        left: 0.9rem !important;
+    }
+}
