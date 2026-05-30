@@ -6,45 +6,10 @@ function initHomePage() {
     if (isHomePageInitialized) return;
     isHomePageInitialized = true;
 
-    initHomeSwiper();
     initHomeHeroParallax();
     initHomeTiltCards();
     initHomeGlowTracking();
     // initHomeSectionAnimations();
-}
-
-function initHomeSwiper() {
-    const swiperElement = document.querySelector(".home-rail-swiper");
-    if (!swiperElement || typeof window.Swiper === "undefined") return;
-    if (swiperElement.classList.contains("swiper-initialized")) return;
-
-    new window.Swiper(swiperElement, {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        speed: 850,
-        grabCursor: true,
-        loop: true,
-        centeredSlides: false,
-        navigation: {
-            nextEl: ".home-rail__button--next",
-            prevEl: ".home-rail__button--prev",
-        },
-        autoplay: {
-            delay: 3400,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1180: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-            },
-        },
-    });
 }
 
 function initHomeHeroParallax() {

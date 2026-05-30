@@ -6,44 +6,10 @@ function initServicesPage() {
     if (isServicesPageInitialized) return;
     isServicesPageInitialized = true;
 
-    initServicesSwiper();
     initServicesHeroAnimation();
     initServicesParallax();
     initServicesTiltCards();
     // initServicesSectionAnimations();
-}
-
-function initServicesSwiper() {
-    const swiperElement = document.querySelector(".services-rail-swiper");
-    if (!swiperElement || typeof window.Swiper === "undefined") return;
-    if (swiperElement.classList.contains("swiper-initialized")) return;
-
-    new window.Swiper(swiperElement, {
-        slidesPerView: 1,
-        spaceBetween: 16,
-        speed: 900,
-        loop: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: ".services-rail__button--next",
-            prevEl: ".services-rail__button--prev",
-        },
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            1180: {
-                slidesPerView: 3,
-                spaceBetween: 24,
-            },
-        },
-    });
 }
 
 function initServicesHeroAnimation() {

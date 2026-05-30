@@ -1423,24 +1423,6 @@ footer,
     overflow: hidden;
 }
 
-.home-rail-swiper,
-.services-rail-swiper {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.home-rail .swiper-wrapper,
-.services-rail .swiper-wrapper {
-    align-items: stretch;
-}
-
-.home-rail .swiper-slide,
-.services-rail .swiper-slide {
-    height: auto;
-}
-
 .hero-panel,
 .info-card,
 .service-card,
@@ -2830,9 +2812,7 @@ html[data-theme="light"] .nav-toggle:hover {
     }
 
     .section-heading--split>*,
-    .section-heading--split .text-link,
-    .section-heading--split .home-rail__nav,
-    .section-heading--split .services-rail__nav {
+    .section-heading--split .text-link {
         justify-self: center !important;
     }
 
@@ -2936,8 +2916,7 @@ html[data-theme="light"] .nav-toggle:hover {
     }
 
     .section-heading--split>*,
-    .section-heading--split .text-link,
-    .section-heading--split .home-rail__nav {
+    .section-heading--split .text-link {
         justify-self: center !important;
     }
 }
