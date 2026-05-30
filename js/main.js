@@ -488,6 +488,152 @@ function applyPageMetaFromConfig() {
     themeColor.setAttribute("content", "#0D0A07");
 }
 
+function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function normalizePhoneHref(phoneDisplay = "") {
+    const digits = String(phoneDisplay).replace(/[^\d+]/g, "");
+
+    if (!digits) return "";
+    if (digits.startsWith("+")) return `tel:${digits}`;
+
+    return `tel:+${digits}`;
+}
+
+function replaceTextInTextNode(node, replacements) {
+    if (!node || !node.nodeValue) return;
+
+    let text = node.nodeValue;
+
+    replacements.forEach(({ from, to }) => {
+        if (!from || !to || from === to) return;
+
+        const pattern = new RegExp(escapeRegExp(from), "g");
+        text = text.replace(pattern, to);
+    });
+
+    node.nodeValue = text;
+}
+
+function replaceTextEverywhere(root, replacements) {
+    if (!root || !replacements.length) return;
+
+    const skipTags = new Set([
+        "SCRIPT",
+        "STYLE",
+        "NOSCRIPT",
+        "SVG",
+        "PATH",
+        "META",
+        "LINK"
+    ]);
+
+    const walker = document.createTreeWalker(
+        root,
+        NodeFilter.SHOW_TEXT,
+        {
+            acceptNode(node) {
+                const parent = node.parentElement;
+
+                if (!parent) return NodeFilter.FILTER_REJECT;
+                if (skipTags.has(parent.tagName)) return NodeFilter.FILTER_REJECT;
+                if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        }
+    );
+
+    const textNodes = [];
+
+    while (walker.nextNode()) {
+        textNodes.push(walker.currentNode);
+    }
+
+    textNodes.forEach((node) => replaceTextInTextNode(node, replacements));
+}
+
+function replaceAttributesEverywhere(replacements) {
+    const attributes = [
+        "aria-label",
+        "title",
+        "alt",
+        "placeholder",
+        "value"
+    ];
+
+    document.querySelectorAll("*").forEach((element) => {
+        attributes.forEach((attr) => {
+            if (!element.hasAttribute(attr)) return;
+
+            let value = element.getAttribute(attr);
+
+            replacements.forEach(({ from, to }) => {
+                if (!from || !to || from === to) return;
+
+                const pattern = new RegExp(escapeRegExp(from), "g");
+                value = value.replace(pattern, to);
+            });
+
+            element.setAttribute(attr, value);
+        });
+    });
+}
+
+function applyGlobalConfigReplacements() {
+    const config = window.SiteConfig;
+    if (!config) return;
+
+    const company = config.company || {};
+    const contact = config.contact || {};
+
+    const companyName = company.name || "";
+    const phoneDisplay = contact.phoneDisplay || "";
+    const email = contact.email || "";
+    const address = contact.address || "";
+
+    const replacements = [
+        ...(company.aliases || []).map((from) => ({
+            from,
+            to: companyName
+        })),
+
+        ...(contact.phoneAliases || []).map((from) => ({
+            from,
+            to: phoneDisplay
+        })),
+
+        ...(contact.emailAliases || []).map((from) => ({
+            from,
+            to: email
+        })),
+
+        ...(contact.addressAliases || []).map((from) => ({
+            from,
+            to: address
+        }))
+    ].filter((item) => item.from && item.to);
+
+    replaceTextEverywhere(document.body, replacements);
+    replaceAttributesEverywhere(replacements);
+
+    const phoneHref = contact.phoneHref || normalizePhoneHref(phoneDisplay);
+    const emailHref = contact.emailHref || (email ? `mailto:${email}` : "");
+
+    if (phoneHref) {
+        document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+            link.setAttribute("href", phoneHref);
+        });
+    }
+
+    if (emailHref) {
+        document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+            link.setAttribute("href", emailHref);
+        });
+    }
+}
+
 function applyBrandConfig() {
     const config = window.SiteConfig;
     if (!config) return;
@@ -565,6 +711,7 @@ function applyBrandConfig() {
     document.querySelectorAll(".cookie-banner__text p").forEach((text) => {
         text.textContent = cookie.text || "";
     });
+    applyGlobalConfigReplacements();
 }
 
 function initSiteConfig() {
