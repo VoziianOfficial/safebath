@@ -1760,3 +1760,242 @@ body[data-service-bg="catalog-3"] .service-hero {
         padding: 0.85rem;
     }
 }
+
+/* ================================
+   SERVICE RELATED CLEAN CARDS
+   Equal cards + visible photo + readable text
+================================ */
+
+.service-related-clean {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(182, 161, 138, 0.16), transparent 28%),
+        radial-gradient(circle at 88% 78%, rgba(215, 193, 164, 0.18), transparent 28%),
+        linear-gradient(180deg, #F3E4CD 0%, #F8EDDD 52%, #E8D2B4 100%) !important;
+    color: #17110D !important;
+}
+
+.service-related-clean .section-heading {
+    text-align: center;
+    justify-items: center;
+    margin-inline: auto;
+}
+
+.service-related-clean .section-kicker {
+    color: #74604F !important;
+}
+
+.service-related-clean .section-heading h2 {
+    color: #17110D !important;
+    max-width: 20ch;
+    text-wrap: balance;
+}
+
+/* grid */
+.service-related-clean .related-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+    align-items: stretch !important;
+}
+
+/* одинаковые карточки */
+.service-related-clean .related-card {
+    position: relative !important;
+    min-height: 430px !important;
+    height: 100% !important;
+
+    display: block !important;
+    overflow: hidden !important;
+    isolation: isolate;
+
+    border-radius: 30px !important;
+    border: 1px solid rgba(23, 17, 13, 0.14) !important;
+
+    background: #17110D !important;
+    box-shadow:
+        0 26px 70px rgba(13, 10, 7, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+/* фото занимает всю карточку */
+.service-related-clean .related-card .card-media {
+    position: absolute !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    z-index: 1;
+
+    transform: scale(1.01);
+    transition:
+        transform 900ms ease,
+        filter var(--transition-base);
+}
+
+/* мягкое затемнение, чтобы фото не убивалось */
+.service-related-clean .related-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    background:
+        linear-gradient(180deg,
+            rgba(13, 10, 7, 0.04) 0%,
+            rgba(13, 10, 7, 0.12) 42%,
+            rgba(13, 10, 7, 0.72) 100%) !important;
+
+    pointer-events: none;
+}
+
+/* тонкая внутренняя рамка */
+.service-related-clean .related-card::after {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    z-index: 3;
+
+    border-radius: 22px;
+    border: 1px solid rgba(246, 232, 211, 0.18);
+
+    pointer-events: none;
+}
+
+/* текстовая плашка */
+.service-related-clean .related-card__content {
+    position: absolute !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    bottom: 1rem !important;
+    z-index: 4;
+
+    display: grid !important;
+    gap: 0.55rem !important;
+
+    padding: 1rem !important;
+    border-radius: 22px !important;
+
+    background: rgba(13, 10, 7, 0.56) !important;
+    border: 1px solid rgba(246, 232, 211, 0.18) !important;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 18px 42px rgba(13, 10, 7, 0.32),
+        inset 0 1px 0 rgba(246, 232, 211, 0.08) !important;
+}
+
+/* текст */
+.service-related-clean .related-card__content h3 {
+    color: #FFF2DC !important;
+    font-size: clamp(1.14rem, 1rem + 0.45vw, 1.42rem) !important;
+    line-height: 1.16 !important;
+    letter-spacing: -0.05em !important;
+    text-wrap: balance;
+}
+
+.service-related-clean .related-card__content p {
+    color: rgba(246, 232, 211, 0.78) !important;
+    font-size: 0.93rem !important;
+    line-height: 1.5 !important;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ссылка */
+.service-related-clean .related-card__content a {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+
+    margin-top: 0.2rem;
+    padding: 0.5rem 0.72rem;
+
+    border-radius: 999px;
+    background: rgba(246, 232, 211, 0.1);
+    border: 1px solid rgba(246, 232, 211, 0.16);
+
+    color: #FFF2DC !important;
+    font-size: 0.84rem;
+    font-weight: 750;
+    line-height: 1;
+
+    transition:
+        transform var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+/* hover */
+.service-related-clean .related-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 170, 137, 0.38) !important;
+    box-shadow:
+        0 36px 92px rgba(13, 10, 7, 0.28),
+        0 0 0 1px rgba(201, 170, 137, 0.12) !important;
+}
+
+.service-related-clean .related-card:hover .card-media {
+    transform: scale(1.06);
+}
+
+.service-related-clean .related-card:hover .related-card__content {
+    background: rgba(13, 10, 7, 0.68) !important;
+    border-color: rgba(201, 170, 137, 0.34) !important;
+}
+
+.service-related-clean .related-card:hover .related-card__content a {
+    transform: translateY(-2px);
+    background: #F6E8D3;
+    color: #17110D !important;
+    border-color: rgba(246, 232, 211, 0.65);
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    .service-related-clean .related-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .service-related-clean .related-card {
+        min-height: 400px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 720px) {
+    .service-related-clean .related-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-related-clean .related-card {
+        min-height: 360px !important;
+        border-radius: 26px !important;
+    }
+
+    .service-related-clean .related-card::after {
+        inset: 0.75rem;
+        border-radius: 20px;
+    }
+
+    .service-related-clean .related-card__content {
+        left: 0.75rem !important;
+        right: 0.75rem !important;
+        bottom: 0.75rem !important;
+        padding: 0.9rem !important;
+        border-radius: 20px !important;
+    }
+}
